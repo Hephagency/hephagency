@@ -1,0 +1,14 @@
+{
+    "menu":{
+        "fr":"Menu",
+        "en":"Menu"
+    },
+    "close_menu": {
+        "fr": "Fermer",
+        "en": "Close"
+    },
+    "last_projects":{
+        "fr":"Derniers projets",
+        "en":"Last projects"
+    }
+}

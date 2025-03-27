@@ -1,0 +1,22 @@
+{
+    "home":{
+        "fr":"Accueil",
+        "en":"Home"
+    },
+    "about":{
+        "fr":"À propos",
+        "en":"About"
+    },
+    "contact":{
+        "fr":"Contact",
+        "en":"Contact"
+    },
+    "blog":{
+        "fr":"Blog",
+        "en":"Blog"
+    },
+    "projects":{
+        "fr":"Projets",
+        "en":"Projects"
+    }
+}
