@@ -10,7 +10,7 @@ import HephagencyIcon from "@/components/global/icons/HephagencyIcon";
  */
 export default function HephagencyHeader() {
     return (
-        <header className="px-4 py-5 md:px-7.5 w-full text-grey-dark flex justify-between sticky z-50">
+        <header className="px-4 py-5 md:px-7.5 w-full text-grey-dark flex justify-between fixed top-0 w-full z-50">
             <HephagencyMenu />
             <HephagencyIcon
             className="w-8 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden xl:block"
@@ -21,6 +21,7 @@ export default function HephagencyHeader() {
                 </span>
                 <HephagencyButtonLink
                     href="#"
+                    linkClassName="hidden md:block"
                 >
                     {translations.contact[hephagency_config.language]}
                 </HephagencyButtonLink>

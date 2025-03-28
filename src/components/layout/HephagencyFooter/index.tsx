@@ -25,7 +25,7 @@ export default function HephagencyFooter() {
                         {translations.footer_contact_cta[hephagency_config.language]}
                     </HephagencyButtonLink>
                 </section>
-                <footer className="pb-5 flex flex-col gap-7.5 md:gap-13.5">
+                <footer className="pb-5 flex flex-col gap-7.5 md:gap-13.5 mt-9.5">
                     <ul className="flex flex-col items-end gap-4">
                         <MenuLinks
                             parentElement="li"

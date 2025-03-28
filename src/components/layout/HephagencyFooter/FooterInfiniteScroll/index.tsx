@@ -57,7 +57,7 @@ export default function FooterInfiniteScroll(){
 
     return (
         <div 
-        className="flex h2 md:h0 whitespace-nowrap items-center min-w-fit py-24"
+        className="flex h2 md:h0 whitespace-nowrap items-center min-w-fit my-24 md:my-48 xl:my-56"
         ref={containerRef}
         >
             <h2>
