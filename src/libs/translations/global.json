@@ -10,5 +10,9 @@
     "last_projects":{
         "fr":"Derniers projets",
         "en":"Last projects"
+    },
+    "paris":{
+        "fr":"Paris",
+        "en":"Paris"
     }
 }

@@ -5,6 +5,7 @@ import {Inter, League_Spartan} from "next/font/google";
 import hephagency_config from "@/libs/hephagency_config";
 import { ReactNode } from "react";
 import clsx from "clsx";
+import HephagencyFooter from "@/components/layout/HephagencyFooter";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className="font-inter">
         <HephagencyHeader/>
         {children}
+        <HephagencyFooter/>
       </body>
     </html>
   );

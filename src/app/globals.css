@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+html{
+  font-size: 16px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,107 +48,105 @@
   --font-league-spartan: var(--font-league-spartan);
 }
 
-@layer components{
-  .paragraph-xx-small{
-    font-family: var(--font-inter);
-    font-size: 0.5rem;
-    line-height: 140%;
-    font-weight: var(--font-weight-light);
-  }
+@utility paragraph-xx-small {
+  font-family: var(--font-inter);
+  font-size: 0.5rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
 
-  .paragraph-x-small{
-    font-family: var(--font-inter);
-    font-size: 0.625rem;
-    line-height: 140%;
-    font-weight: var(--font-weight-light);
-  }
+@utility paragraph-x-small {
+  font-family: var(--font-inter);
+  font-size: 0.625rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
 
-  .paragraph-small{
-    font-family: var(--font-inter);
-    font-size: 0.875rem;
-    line-height: 140%;
-    font-weight: var(--font-weight-light);
-  }
+@utility paragraph-small {
+  font-family: var(--font-inter);
+  font-size: 0.875rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
 
-  .paragraph-p{
-    font-family: var(--font-inter);
-    font-size: 1rem;
-    line-height: 140%;
-    font-weight: var(--font-weight-light);
-  }
+@utility paragraph-p {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
 
-  .paragraph-large{
-    font-family: var(--font-inter);
-    font-size: 1.25rem;
-    line-height: 140%;
-    font-weight: var(--font-weight-light);
-  }
+@utility paragraph-large {
+  font-family: var(--font-inter);
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
 
-  .paragraph-x-large{
-    font-family: var(--font-inter);
-    font-size: 1.5rem;
-    line-height: 120%;
-  }
+@utility paragraph-x-large {
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  line-height: 120%;
+}
 
-  .paragraph-xx-large{
-    font-family: var(--font-inter);
-    font-size: 2rem;
-    line-height: 120%;
-  }
+@utility paragraph-xx-large {
+  font-family: var(--font-inter);
+  font-size: 2rem;
+  line-height: 120%;
+}
 
-  .h0{
-    font-family: var(--font-league-spartan);
-    font-size: 7.5rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h0 {
+  font-family: var(--font-league-spartan);
+  font-size: 7.5rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h1{
-    font-family: var(--font-league-spartan);
-    font-size: 6rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h1 {
+  font-family: var(--font-league-spartan);
+  font-size: 6rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h2{
-    font-family: var(--font-league-spartan);
-    font-size: 4.75rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h2 {
+  font-family: var(--font-league-spartan);
+  font-size: 4.75rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h3{
-    font-family: var(--font-league-spartan);
-    font-size: 3.75rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h3 {
+  font-family: var(--font-league-spartan);
+  font-size: 3.75rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h4{
-    font-family: var(--font-league-spartan);
-    font-size: 3.125rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h4 {
+  font-family: var(--font-league-spartan);
+  font-size: 3.125rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h5{
-    font-family: var(--font-league-spartan);
-    font-size: 2.5rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h5 {
+  font-family: var(--font-league-spartan);
+  font-size: 2.5rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
 
-  .h6{
-    font-family: var(--font-league-spartan);
-    font-size: 1.875rem;
-    line-height: 120%;
-    font-weight: var(--font-weight-light);
-    text-transform: uppercase;
-  }
+@utility h6 {
+  font-family: var(--font-league-spartan);
+  font-size: 1.875rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
 }

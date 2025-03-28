@@ -1,9 +1,11 @@
 'use client'
 
-import { ReactNode, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import clsx from "clsx";
+import CarousselNavigationElement from "./CarousselNavigationElement";
+import { useMediaQuery } from "react-responsive";
 
 interface CarousselProps {
     items: ReactNode[];
@@ -16,10 +18,24 @@ interface CarousselProps {
 
 export default function Caroussel({ items, className }: CarousselProps) {
     const swiperRef = useRef<SwiperRef | null>(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // A state variable to check if the current device is a touch device
+    const isTouchDevice = useMediaQuery({ query: '(hover: none)' });
+    const [isHydrated, setIsHydrated] = useState(false);
+
+    // Hydrate the component after the first render
+    useEffect(()=>{
+        setIsHydrated(true);
+    },[]);
 
     function slideTo(index: number) {
-        if(swiperRef.current){
-            swiperRef.current.swiper.slideTo(index);
+        if (swiperRef.current) {
+            if (index < 0 || index >= items.length) {
+                swiperRef.current.swiper.slideToLoop(0);
+            } else {
+                swiperRef.current.swiper.slideToLoop(index);
+            }
         }
     }
 
@@ -29,9 +45,12 @@ export default function Caroussel({ items, className }: CarousselProps) {
             "relative"
         )}>
             <Swiper
-            className="w-full h-full"
-            ref={swiperRef}
-            autoplay
+                className="w-full h-full"
+                ref={swiperRef}
+                loop={true}
+                onSlideChange={(swiper) => {
+                    setCurrentIndex(swiper.realIndex);
+                }}
             >
                 {items.map((item, index) =>
                     <SwiperSlide key={index}>
@@ -39,15 +58,23 @@ export default function Caroussel({ items, className }: CarousselProps) {
                     </SwiperSlide>
                 )}
             </Swiper>
-            <div className="w-full flex absolute bottom-1 left-0 gap-1 z-50">
-                {Array.from({length: items.length}).map((_,index)=>
-                <button
-                onClick={()=>slideTo(index)}
-                key={index}
-                className="grow h-[4px] bg-grey-light"
-                />
-            )}
-            </div>
+            {
+                (!isTouchDevice && isHydrated) &&
+                <div
+                    className="w-full flex absolute bottom-2.5 left-0 gap-1 z-50 px-2.5"
+                    key={currentIndex}
+                >
+                    {Array.from({ length: items.length }).map((_, index) =>
+                        <CarousselNavigationElement
+                            key={index}
+                            active={index < currentIndex}
+                            animated={index === currentIndex}
+                            onClick={() => slideTo(index)}
+                            onAnimationComplete={() => { slideTo(index + 1) }}
+                        />
+                    )}
+                </div>
+            }
         </div>
     )
 }

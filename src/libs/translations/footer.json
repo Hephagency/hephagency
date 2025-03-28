@@ -1,0 +1,34 @@
+{
+    "footer_contact_title":{
+        "fr":"Dites-nous tout",
+        "en":"Tell us everything"
+    },
+    "footer_contact_description":{
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+    },
+    "footer_contact_cta":{
+        "fr":"Nous contacter",
+        "en":"Contact us"
+    },
+    "footer_phone_number":{
+        "fr":"Numéro de téléphone",
+        "en":"Phone number"
+    },
+    "footer_email":{
+        "fr":"Email",
+        "en":"Email"
+    },
+    "copyrights":{
+        "fr":"©2025 Hephagency",
+        "en":"©2025 Hephagency"
+    },
+    "legal_mentions":{
+        "fr":"Mentions légales",
+        "en":"Legal mentions"
+    },
+    "privacy_policy":{
+        "fr":"Politique de confidentialité",
+        "en":"Privacy policy"
+    }
+}

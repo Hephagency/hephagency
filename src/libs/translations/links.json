@@ -18,5 +18,21 @@
     "projects":{
         "fr":"Projets",
         "en":"Projects"
+    },
+    "linkedin":{
+        "fr":"LinkedIn",
+        "en":"LinkedIn"
+    },
+    "instagram":{
+        "fr":"Instagram",
+        "en":"Instagram"
+    },
+    "behance":{
+        "fr":"Behance",
+        "en":"Behance"
+    },
+    "awwwards":{
+        "fr":"Awwwards",
+        "en":"Awwwards"
     }
 }

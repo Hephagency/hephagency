@@ -14,7 +14,7 @@ export interface HephagencyButtonLayoutProps{
 export default function HephagencyButtonLayout({icon, children, className}: HephagencyButtonLayoutProps){
     return (
         <div className={clsx(
-            "flex items-center justify-center px-8 py-3 paragraph-large gap-2.5 border border-grey-dark",
+            "flex items-center justify-center px-8 py-3 paragraph-large gap-2.5 border border-current uppercase",
             className
         )}>
             {icon}

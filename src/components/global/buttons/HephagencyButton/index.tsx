@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import HephagencyButtonLayout, { HephagencyButtonLayoutProps } from "../HephagencyButtonLayout";
+import clsx from "clsx";
 
 interface HephagencyButtonProps extends HephagencyButtonLayoutProps{
     onClick?: () => void;
@@ -12,7 +13,10 @@ interface HephagencyButtonProps extends HephagencyButtonLayoutProps{
 
 export default function HephagencyButton({icon, children, className, onClick, buttonClassName}: HephagencyButtonProps){
     return (
-        <button onClick={onClick} className={buttonClassName}>
+        <button onClick={onClick} className={clsx(
+            buttonClassName,
+            "cursor-pointer"
+        )}>
             <HephagencyButtonLayout icon={icon} className={className}>
                 {children}
             </HephagencyButtonLayout>
