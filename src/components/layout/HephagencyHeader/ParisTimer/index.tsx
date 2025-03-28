@@ -21,6 +21,7 @@ export default function ParisTimer(){
     }
 
     const [time, setTime] = useState(getCurrentTime());
+    const [hydrated, setHydrated] = useState(false);
 
     // Update the time every minute
     useEffect(()=>{
@@ -29,6 +30,8 @@ export default function ParisTimer(){
         }, 60000);
         return () => clearInterval(interval);
     },[]);
+
+    if(!hydrated || !time) return null; // Prevents hydration error
 
     return (
         <>

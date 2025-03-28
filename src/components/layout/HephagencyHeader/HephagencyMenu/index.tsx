@@ -16,7 +16,6 @@ import HephagencyMenuSlider from "./HephagencyMenuSlider";
 export default function HephagencyMenu(){
     // State for the menu
     const [menuOpen, setMenuOpen] = useState(false);
-    console.log(hephagency_config.language);
     return (
         <>
         <HephagencyButton 
@@ -31,7 +30,7 @@ export default function HephagencyMenu(){
             {menuOpen ? translations.close_menu[hephagency_config.language] : translations.menu[hephagency_config.language]}
         </HephagencyButton>
         <div className={clsx(
-            "fixed top-0 left-0 w-full h-full bg-orange-500 transition-transform duration-500 origin-[1rem_1.25rem] px-4 pb-8 flex flex-col justify-end -z-10",
+            "fixed top-0 left-0 w-full h-full bg-orange-500 transition-transform duration-500 origin-[4_1.25rem] px-4 pb-8 flex flex-col justify-end -z-10",
             menuOpen ? "scale-100" : "scale-0"
         )}>
             <ul className="absolute top-1/4 right-4 grid grid-cols-2 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">

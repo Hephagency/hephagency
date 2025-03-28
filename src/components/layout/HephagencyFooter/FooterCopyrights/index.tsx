@@ -25,7 +25,7 @@ export default function FooterCopyrights(){
             <li key={index}>
                 <MenuLink
                 {...link}
-                className="text-paragraph-small"
+                className="paragraph-small"
                 />
             </li>
             )}
