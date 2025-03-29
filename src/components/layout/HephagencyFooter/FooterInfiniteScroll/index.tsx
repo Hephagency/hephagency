@@ -19,7 +19,7 @@ export default function FooterInfiniteScroll(){
     useEffect(()=>{
         if(containerRef.current){
             const children = Array.from(containerRef.current.children);
-            Array.from({length: 3}).forEach(()=>{
+            Array.from({length: 5}).forEach(()=>{
                 children.forEach((child)=>{
                     const clone = child.cloneNode(true);
                     containerRef.current?.appendChild(clone);

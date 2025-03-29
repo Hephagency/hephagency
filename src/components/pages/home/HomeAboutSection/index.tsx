@@ -23,7 +23,7 @@ export default function HomeAboutSection() {
                 <div className="flex flex-col items-start gap-6 md:relative md:pb-20 md:basis-0 xl:pb-0 md:grow md:h-131 xl:h-160 xl:flex-row xl:justify-between xl:grow-2">
                     <EntitledParagraph
                         title={translations.home_about_vision_title[hephagency_config.language]}
-                        className="sticky top-1/6 h-fit xl:max-w-80"
+                        className="md:sticky md:top-1/6 h-fit xl:max-w-80"
                     >
                         {translations.home_about_vision_text[hephagency_config.language]}
                     </EntitledParagraph>

@@ -1,4 +1,5 @@
 import HomeAboutSection from "@/components/pages/home/HomeAboutSection";
+import HomeProjectsSection from "@/components/pages/home/HomeProjectsSection";
 import HomeSplinePlayground from "@/components/pages/home/HomeSplinePlayground";
 
 export default function Home(){
@@ -6,6 +7,7 @@ export default function Home(){
     <>
     <HomeSplinePlayground/>
     <HomeAboutSection/>
+    <HomeProjectsSection/>
     </>
   )
 }
