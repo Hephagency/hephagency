@@ -20,8 +20,6 @@ export default function Caroussel({ items, className }: CarousselProps) {
     const swiperRef = useRef<SwiperRef | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // A state variable to check if the current device is a touch device
-    const isTouchDevice = useMediaQuery({ query: '(hover: none)' });
     const [isHydrated, setIsHydrated] = useState(false);
 
     // Hydrate the component after the first render
@@ -59,7 +57,7 @@ export default function Caroussel({ items, className }: CarousselProps) {
                 )}
             </Swiper>
             {
-                (!isTouchDevice && isHydrated) &&
+                (isHydrated) &&
                 <div
                     className="w-full flex absolute bottom-2.5 left-0 gap-1 z-50 px-2.5"
                     key={currentIndex}

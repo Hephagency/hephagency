@@ -37,7 +37,7 @@ export default function RootLayout({
       leagueSpartan.variable,
     )}
     >
-      <body className="font-inter">
+      <body className="font-inter bg-grey-dark">
         <HephagencyHeader/>
         {children}
         <HephagencyFooter/>

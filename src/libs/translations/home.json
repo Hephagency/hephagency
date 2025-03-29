@@ -2,5 +2,17 @@
     "home_spline_title":{
         "fr":"Forgez votre présence sur le web",
         "en":"Forge your web presence"
+    },
+    "home_about_intro": {
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "home_about_vision_title": {
+        "fr":"Notre vision",
+        "en":"Our vision"
+    },
+    "home_about_vision_text": {
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
 }

@@ -14,5 +14,9 @@
     "paris":{
         "fr":"Paris",
         "en":"Paris"
+    },
+    "hephagency":{
+        "fr":"Hephagency",
+        "en":"Hephagency"
     }
 }
