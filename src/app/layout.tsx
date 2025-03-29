@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import HephagencyHeader from "@/components/layout/HephagencyHeader";
-import {Inter, League_Spartan} from "next/font/google";
+import { Inter, League_Spartan } from "next/font/google";
 import hephagency_config from "@/libs/hephagency_config";
 import { ReactNode } from "react";
 import clsx from "clsx";
 import HephagencyFooter from "@/components/layout/HephagencyFooter";
+import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300","500"]
+  weight: ["300", "500"]
 });
 
 const leagueSpartan = League_Spartan({
@@ -31,17 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <html
-    lang={hephagency_config.language}
-    className={clsx(
-      inter.variable,
-      leagueSpartan.variable,
-    )}
+      lang={hephagency_config.language}
+      className={clsx(
+        inter.variable,
+        leagueSpartan.variable,
+      )}
     >
-      <body className="font-inter bg-grey-dark text-grey-light">
-        <HephagencyHeader/>
-        {children}
-        <HephagencyFooter/>
-      </body>
+      <ReactLenis root>
+        <body className="font-inter bg-grey-dark text-grey-light">
+          <HephagencyHeader />
+          {children}
+          <HephagencyFooter />
+        </body>
+      </ReactLenis>
     </html>
   );
 }
