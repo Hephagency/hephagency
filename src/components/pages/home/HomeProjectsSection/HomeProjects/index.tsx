@@ -9,8 +9,6 @@ import HomeProjectsSliders from "./HomeProjectsSliders";
 export default function HomeProjects(){
     const projects = sampleProjects.filter(({language})=>language===hephagency_config.language);
 
-    console.log(projects);
-
     return (
        <HomeProjectsSliders projects={projects} />
     )

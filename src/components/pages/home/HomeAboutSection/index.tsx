@@ -9,7 +9,7 @@ import HephagencyButtonLink from "@/components/global/buttons/HephagencyButtonLi
  */
 export default function HomeAboutSection() {
     return (
-        <section className="bg-grey-dark w-full flex flex-col gap-6 md:gap-16 text-grey-light py-15 px-4 md:px-7.5">
+        <section className="bg-grey-dark w-full flex flex-col gap-6 md:gap-16 text-grey-light py-15 px-4 md:px-6 xl:px-7.5">
             <p className="max-w-257">
                 <span className="h6 leading-6 md:h5 md:leading-5">
                     {translations.hephagency[hephagency_config.language]}

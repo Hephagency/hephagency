@@ -1,4 +1,4 @@
-const footerLinkClassName = "paragraph-large underline underline-offset-6 text-grey-light";
+const footerLinkClassName = "paragraph-large underline underline-offset-6 text-grey-light transition-all hover:opacity-50";
 export {footerLinkClassName};
 
 export interface FooterLinkProps{

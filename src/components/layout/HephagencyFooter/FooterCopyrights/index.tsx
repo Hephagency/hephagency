@@ -25,7 +25,7 @@ export default function FooterCopyrights(){
             <li key={index}>
                 <MenuLink
                 {...link}
-                className="paragraph-small"
+                className="paragraph-small transition-all relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[1px] after:bg-grey-light hover:after:bg-grey-light hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:origin-left after:duration-500"
                 />
             </li>
             )}

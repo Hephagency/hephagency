@@ -22,5 +22,13 @@
     "home_projects_cta":{
         "fr": "Voir notre travail",
         "en": "See our work"
+    },
+    "home_blog_title":{
+        "fr":"Notre Blog",
+        "en":"Our Blog"
+    },
+    "home_blog_intro": {
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
 }

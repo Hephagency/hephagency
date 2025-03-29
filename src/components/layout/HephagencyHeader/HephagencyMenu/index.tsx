@@ -63,7 +63,7 @@ export default function HephagencyMenu(){
             <ul className="absolute top-1/4 right-4 grid grid-cols-2 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">
                 <MenuLinks
                 parentElement="li" 
-                linkClassName="paragraph-large underline underline-offset-6"
+                linkClassName="paragraph-large underline underline-offset-6 transition-all hover:opacity-50"
                 />
             </ul>
             <div>

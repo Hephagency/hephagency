@@ -18,5 +18,9 @@
     "hephagency":{
         "fr":"Hephagency",
         "en":"Hephagency"
+    },
+    "view_all":{
+        "fr":"Voir tout",
+        "en":"View all"
     }
 }
