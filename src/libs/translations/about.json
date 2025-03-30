@@ -1,0 +1,24 @@
+{
+    "about_title":{
+        "fr": "Forgez votre présence sur le web",
+        "en": "Forge your web presence"
+    },
+    "about_intro_paragraph":{
+        "fr":{
+            "content":"Agence créant des solutions de design évolutives dans le domaine, du développement, du webdesign, et du branding. Nos forgeons des solutions claires, simples et logiques.",
+            "highlight": [
+                "claires",
+                "simples",
+                "logiques"
+            ]
+        },
+        "en":{
+            "content":"Agency creating scalable design solutions in the field of development, web design, and branding. We forge clear, simple and logical solutions.",
+            "highlight": [
+                "clear",
+                "simple",
+                "logical"
+            ]
+        }
+    }
+}
