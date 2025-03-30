@@ -148,5 +148,67 @@
                 "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
             }
         }
-    ]
+    ],
+    "about_skills_top_heading":{
+        "fr":"Nos talents",
+        "en":"Our talents"
+    },
+    "about_skills_heading_paragraph":{
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "about_skills":{
+        "fr":[
+            {
+                "image":"https://picsum.photos/600/1200?random=5"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=6"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=7"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=8"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=9"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=10"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=11"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=12"
+            }
+        ],
+        "en":[
+            {
+                "image":"https://picsum.photos/600/1200?random=5"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=6"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=7"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=8"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=9"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=10"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=11"
+            },
+            {
+                "image":"https://picsum.photos/600/1200?random=12"
+            }
+        ]
+    }
 }

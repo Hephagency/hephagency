@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import MenuLinks from "../../menu/MenuLinks";
 import HephagencyMenuSlider from "./HephagencyMenuSlider";
+import { useLenis } from "lenis/react";
 
 /**
  * The main menu component in the Hephagency design system
@@ -16,6 +17,7 @@ import HephagencyMenuSlider from "./HephagencyMenuSlider";
 export default function HephagencyMenu(){
     // State for the menu
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isNegative, setIsNegative] = useState(true);
 
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -23,8 +25,24 @@ export default function HephagencyMenu(){
         if(menuRef.current){
             const header = menuRef.current.closest("header");
             if(header){
-                header!.style.mixBlendMode = !menuOpen ? "difference" : "normal";
-                header!.style.filter = !menuOpen ? "invert(1)" : "none";
+                header!.style.mixBlendMode = (!menuOpen && isNegative) ? "difference" : "normal";
+                header!.style.filter = (!menuOpen && isNegative) ? "invert(1)" : "none";
+            }
+        }
+    }
+
+    function handleScroll(){
+        if(menuRef.current){
+            const header = menuRef.current.closest("header");
+            if(header){
+                const headerHeight = header.getBoundingClientRect().height/2;
+                const negativeRemovalsElements = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
+                const inWindow = Array.from(negativeRemovalsElements).some((element) => {
+                    const rect = element.getBoundingClientRect();
+                    console.log(rect,headerHeight);
+                    return rect.top <= headerHeight && rect.bottom >= headerHeight;
+                });
+                setIsNegative(!inWindow);
             }
         }
     }
@@ -37,11 +55,9 @@ export default function HephagencyMenu(){
                 updateHeader();
             }
         }
-    },[menuRef, menuOpen]);
+    },[menuRef, menuOpen, isNegative]);
 
-    useEffect(()=>{
-        updateHeader();
-    },[menuRef]);
+    useLenis(handleScroll);
 
     return (
         <>

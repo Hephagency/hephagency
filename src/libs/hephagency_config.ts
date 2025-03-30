@@ -10,4 +10,5 @@ export default {
         lat: process.env.NEXT_PUBLIC_LATITUDE,
     },
     siteName: process.env.NEXT_PUBLIC_SITE_NAME,
+    negativeRemovalClassName: "negative-none",
 }
