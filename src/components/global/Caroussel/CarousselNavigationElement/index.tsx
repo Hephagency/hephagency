@@ -43,7 +43,7 @@ export default function CarousselNavigationElement({ active, animated, onClick, 
         <button
             onClick={onClick}
             className={clsx(
-                "grow h-[4px] bg-grey-400 cursor-pointer",
+                "grow h-[4px] bg-grey-400 cursor-pointer transition-all hover:opacity-50",
             )}
         >
             <div

@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import MenuLinks from "../../menu/MenuLinks";
 import HephagencyMenuSlider from "./HephagencyMenuSlider";
 import { useLenis } from "lenis/react";
+import { usePathname } from "next/navigation";
 
 /**
  * The main menu component in the Hephagency design system
@@ -20,6 +21,7 @@ export default function HephagencyMenu(){
     const [isNegative, setIsNegative] = useState(true);
 
     const menuRef = useRef<HTMLDivElement>(null);
+
 
     function updateHeader(){
         if(menuRef.current){
@@ -56,6 +58,12 @@ export default function HephagencyMenu(){
             }
         }
     },[menuRef, menuOpen, isNegative]);
+
+    const pathname = usePathname();
+
+    useEffect(()=>{
+        setMenuOpen(false);
+    },[pathname]);
 
     useLenis(handleScroll);
 

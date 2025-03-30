@@ -14,11 +14,11 @@ interface MenuLinksProps{
 export default function MenuLinks({linkClassName, parentElement}: MenuLinksProps){
     const links : MenuLinkProps[] = [
         {
-            href: "#",
+            href: "/",
             children: translations.home[hephagency_config.language],
         },
         {
-            href: "#",
+            href: "/about",
             children: translations.about[hephagency_config.language],
         },
         {

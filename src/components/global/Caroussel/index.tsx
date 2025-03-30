@@ -10,13 +10,14 @@ import { useMediaQuery } from "react-responsive";
 interface CarousselProps {
     items: ReactNode[];
     className?: string;
+    onSlideChange?: (index: number) => void;
 }
 
 /**
  * A caroussel component in the Hephagency design system
  */
 
-export default function Caroussel({ items, className }: CarousselProps) {
+export default function Caroussel({ items, className, onSlideChange }: CarousselProps) {
     const swiperRef = useRef<SwiperRef | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,13 +38,19 @@ export default function Caroussel({ items, className }: CarousselProps) {
         }
     }
 
+    useEffect(()=>{
+        if(onSlideChange){
+            onSlideChange(currentIndex);
+        }
+    },[currentIndex]);
+
     return (
         <div className={clsx(
             className,
             "relative"
         )}>
             <Swiper
-                className="w-full h-full"
+                className=" h-full"
                 ref={swiperRef}
                 loop={true}
                 onSlideChange={(swiper) => {
@@ -51,7 +58,9 @@ export default function Caroussel({ items, className }: CarousselProps) {
                 }}
             >
                 {items.map((item, index) =>
-                    <SwiperSlide key={index}>
+                    <SwiperSlide 
+                    key={index}
+                    >
                         {item}
                     </SwiperSlide>
                 )}
