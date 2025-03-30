@@ -22,5 +22,9 @@
     "view_all":{
         "fr":"Voir tout",
         "en":"View all"
+    },
+    "work_with_us":{
+        "fr":"Travailler avec nous",
+        "en":"Work with us"
     }
 }

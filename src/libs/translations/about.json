@@ -20,5 +20,133 @@
                 "logical"
             ]
         }
-    }
+    },
+    "about_grid_first_word":{
+        "fr":"Travailler",
+        "en":"Work"
+    },
+    "about_grid_heading_text":{
+        "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+        "en": "with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+    },
+    "about_grid_parts":{
+        "fr":[
+            {
+                "title":"Le design forge votre croissance",
+                "texts":[
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                ]
+            },
+            {
+                "title":"Système de paiement et suivi du projet transparent",
+                "texts":[
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                ]
+            },
+            {
+                "title":"Système de paiement et suivis du projet transparent",
+                "texts":[
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                ]
+            }
+        ],
+        "en":[
+            [
+                {
+                    "title": "Design drives your growth",
+                    "texts": [
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    ]
+                },
+                {
+                    "title": "Transparent payment and project tracking system",
+                    "texts": [
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    ]
+                },
+                {
+                    "title": "Transparent payment and project tracking system",
+                    "texts": [
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    ]
+                }
+            ]
+        ]
+    },
+    "about_values_title":{
+        "fr":"Nos valeurs",
+        "en":"Our values"
+    },
+    "about_values": [
+        {
+            "title":{
+                "fr": "Valeur 1",
+                "en": "Value 1"
+            },
+            "illustration": "https://picsum.photos/600/600?random=1",
+            "text_image": "https://picsum.photos/75/35?random=1",
+            "first_word": {
+                "fr": "Travailler",
+                "en": "Work"
+            },
+            "text":{
+                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+            }
+        },
+        {
+            "title":{
+                "fr": "Valeur 2",
+                "en": "Value 2"
+            },
+            "illustration": "https://picsum.photos/600/600?random=2",
+            "text_image": "https://picsum.photos/75/35?random=2",
+            "first_word": {
+                "fr": "Travailler",
+                "en": "Work"
+            },
+            "text":{
+                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+            }
+        },
+        {
+            "title":{
+                "fr": "Valeur 3",
+                "en": "Value 3"
+            },
+            "illustration": "https://picsum.photos/600/600?random=3",
+            "text_image": "https://picsum.photos/75/35?random=3",
+            "first_word": {
+                "fr": "Travailler",
+                "en": "Work"
+            },
+            "text":{
+                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+            }
+        },
+        {
+            "title":{
+                "fr": "Valeur 4",
+                "en": "Value 4"
+            },
+            "illustration": "https://picsum.photos/600/600?random=4",
+            "text_image": "https://picsum.photos/75/35?random=4",
+            "first_word": {
+                "fr": "Travailler",
+                "en": "Work"
+            },
+            "text":{
+                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+            }
+        }
+    ]
 }
