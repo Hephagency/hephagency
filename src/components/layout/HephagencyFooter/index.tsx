@@ -19,7 +19,7 @@ export default function HephagencyFooter() {
                         {translations.footer_contact_description[hephagency_config.language]}
                     </p>
                     <HephagencyButtonLink
-                        href="#"
+                        href="/contact"
                         className="w-fit"
                     >
                         {translations.footer_contact_cta[hephagency_config.language]}

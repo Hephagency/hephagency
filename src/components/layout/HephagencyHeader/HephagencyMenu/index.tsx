@@ -63,9 +63,30 @@ export default function HephagencyMenu(){
 
     useEffect(()=>{
         setMenuOpen(false);
+        handleScroll();
     },[pathname]);
 
     useLenis(handleScroll);
+
+    useEffect(()=>{
+        const negativeRemovalClassNames = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
+        // Listen the class change on the negative removal elements
+        // If the class is removed or added, we need to call the handleScroll function
+        negativeRemovalClassNames.forEach((element) => {
+            const observer = new MutationObserver(handleScroll);
+            observer.observe(element, {
+                attributes: true,
+                attributeFilter: ["class"],
+            });
+        });
+        // Cleanup the observer when the component is unmounted
+        return () => {
+            negativeRemovalClassNames.forEach((element) => {
+                const observer = new MutationObserver(handleScroll);
+                observer.disconnect();
+            });
+        }
+    },[]);
 
     return (
         <>
@@ -81,10 +102,10 @@ export default function HephagencyMenu(){
             {menuOpen ? translations.close_menu[hephagency_config.language] : translations.menu[hephagency_config.language]}
         </HephagencyButton>
         <div ref={menuRef} className={clsx(
-            "absolute top-0 left-0 w-full h-dvh bg-orange-500 transition-transform duration-500 origin-[1rem_1.25rem] md:origin-[1.825rem_1.25rem] px-4 pb-8 flex flex-col justify-end -z-10",
+            "absolute top-0 left-0 w-full h-dvh bg-orange-500 transition-transform duration-500 origin-[1rem_1.25rem] md:origin-[1.825rem_1.25rem] px-4 md:px-6 xl:px-7.5 pb-8 flex flex-col justify-end -z-10",
             menuOpen ? "scale-100" : "scale-0"
         )}>
-            <ul className="absolute top-1/4 right-4 grid grid-cols-2 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">
+            <ul className="absolute top-1/4 right-4 grid grid-cols-2 md:right-6 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">
                 <MenuLinks
                 parentElement="li" 
                 linkClassName="paragraph-large underline underline-offset-6 transition-all hover:opacity-50"

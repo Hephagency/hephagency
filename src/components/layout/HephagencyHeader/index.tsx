@@ -20,7 +20,7 @@ export default function HephagencyHeader() {
                     <ParisTimer/>
                 </span>
                 <HephagencyButtonLink
-                    href="#"
+                    href="/contact"
                     linkClassName="hidden md:block"
                 >
                     {translations.contact[hephagency_config.language]}

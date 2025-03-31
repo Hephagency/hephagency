@@ -1,0 +1,114 @@
+{
+    "contact_next":{
+        "fr":"Suivant",
+        "en":"Next"
+    },
+    "contact_intro_title":{
+        "fr":"Faites-nous coucou",
+        "en":"Say hello to us"
+    },
+    "contact_intro_text":{
+        "fr":"Un projet, une idée ou simplement pour nous passer le bonjour, vous pouvez nous écrire et nous vous recontacterons sous les plus brefs délais afin que nous forgieons ensemble votre vision.",
+        "en":"A project, an idea or just to say hello, you can write to us and we will get back to you as soon as possible so that we can forge your vision together."
+    },
+    "contact_intro_cta":{
+        "fr":"C'est parti",
+        "en":"Let's go"
+    },
+    "contact_subject_title":{
+        "fr":"Quel est le sujet du message ?",
+        "en":"What is the subject of the message ?"
+    },
+    "contact_subjects":{
+        "fr":[
+            "Thème 1",
+            "Thème 2",
+            "Thème 3",
+            "Thème 4",
+            "Thème 5"
+        ],
+        "en":[
+            "Theme 1",
+            "Theme 2",
+            "Theme 3",
+            "Theme 4",
+            "Theme 5"
+        ]
+    },
+    "contact_discover_title":{
+        "fr":"Comment vous nous avez découvert ?",
+        "en":"How did you discover us ?"
+    },
+    "contact_discover_propositions":{
+        "fr":[
+            "Thème 1",
+            "Thème 2",
+            "Thème 3",
+            "Thème 4",
+            "Thème 5"
+        ],
+        "en":[
+            "Theme 1",
+            "Theme 2",
+            "Theme 3",
+            "Theme 4",
+            "Theme 5"
+        ]
+    },
+    "contact_other_answer_placeholder":{
+        "fr":"Autre",
+        "en":"Other"
+    },
+    "contact_informations_title":{
+        "fr":"Comment pouvons-nous vous contacter ?",
+        "en":"How can we contact you ?"
+    },
+    "contact_first_name":{
+        "fr":"Prénom",
+        "en":"First name"
+    },
+    "contact_first_name_placeholder":{
+        "fr":"Votre prénom",
+        "en":"Your first name"
+    },
+    "contact_last_name_placeholder":{
+        "fr":"Votre nom",
+        "en":"Your last name"
+    },
+    "contact_last_name":{
+        "fr":"Nom",
+        "en":"Last name"
+    },
+    "contact_email":{
+        "fr":"Email",
+        "en":"Email"
+    },
+    "contact_email_placeholder":{
+        "fr":"Votre email",
+        "en":"Your email"
+    },
+    "contact_phone_placeholder":{
+        "fr":"Votre téléphone",
+        "en":"Your phone"
+    },
+    "contact_phone":{
+        "fr":"Téléphone",
+        "en":"Phone"
+    },
+    "contact_message_title":{
+        "fr":"Votre message",
+        "en":"Your message"
+    },
+    "contact_message_placeholder":{
+        "fr":"Écrivez votre message ici",
+        "en":"Write your message here"
+    },
+    "contact_submitted_title":{
+        "fr":"Merci !",
+        "en":"Thank you !"
+    },
+    "contact_submitted_text":{
+        "fr":"Votre message a bien été pris en compte.",
+        "en":"Your message has been received." 
+    }
+}

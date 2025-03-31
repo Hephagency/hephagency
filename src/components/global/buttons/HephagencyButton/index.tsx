@@ -11,13 +11,18 @@ interface HephagencyButtonProps extends HephagencyButtonLayoutProps{
  * The main button component in the Hephagency design system
  */
 
-export default function HephagencyButton({icon, children, className, onClick, buttonClassName}: HephagencyButtonProps){
+export default function HephagencyButton({icon, children, className, onClick, buttonClassName, isActive}: HephagencyButtonProps){
     return (
-        <button onClick={onClick} className={clsx(
+        <button onClick={(e)=>{
+            e.preventDefault();
+            if(onClick){
+                onClick();
+            }
+        }} className={clsx(
             buttonClassName,
             "cursor-pointer"
         )}>
-            <HephagencyButtonLayout icon={icon} className={className}>
+            <HephagencyButtonLayout icon={icon} className={className} isActive={isActive}>
                 {children}
             </HephagencyButtonLayout>
         </button>

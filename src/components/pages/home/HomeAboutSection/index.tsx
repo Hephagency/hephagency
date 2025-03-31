@@ -30,7 +30,7 @@ export default function HomeAboutSection() {
                     <HephagencyButtonLink
                         className="w-fit"
                         linkClassName="md:absolute md:bottom-0 md:left-0 xl:static h-fit xl:self-end"
-                        href="#"
+                        href="/about"
                     >
                         {translations.about[hephagency_config.language]}
                     </HephagencyButtonLink>
