@@ -4,11 +4,13 @@ import footer from "./footer.json";
 import home from "./home.json";
 import about from "./about.json";
 import contact from "./contact.json";
+import blog from "./blog.json";
 export default {
     ...global,
     ...links,
     ...footer,
     ...home,
     ...about,
-    ...contact
+    ...contact,
+    ...blog
 }

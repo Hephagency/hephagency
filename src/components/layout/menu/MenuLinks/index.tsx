@@ -22,7 +22,7 @@ export default function MenuLinks({linkClassName, parentElement}: MenuLinksProps
             children: translations.about[hephagency_config.language],
         },
         {
-            href: "#",
+            href: "/blog",
             children: translations.blog[hephagency_config.language],
         },
         {

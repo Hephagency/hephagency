@@ -1,0 +1,14 @@
+{
+    "blog_title":{
+        "fr":"Blog",
+        "en":"Blog"
+    },
+    "blog_last_articles":{
+        "fr":"Nos derniers articles",
+        "en":"Our latest articles"
+    },
+    "blog_all":{
+        "fr":"Toutes",
+        "en":"All"
+    }
+}

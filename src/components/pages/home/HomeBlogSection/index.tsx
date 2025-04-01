@@ -21,7 +21,7 @@ export default function HomeBlogSection() {
             <div className="flex flex-col gap-14.5 items-center">
                 <HomeBlogArticles />
                 <HephagencyButtonLink
-                    href="#"
+                    href="/blog"
                     linkClassName="w-fit"
                 >
                     {translations.view_all[hephagency_config.language]}
