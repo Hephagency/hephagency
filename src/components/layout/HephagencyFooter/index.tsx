@@ -15,7 +15,7 @@ export default function HephagencyFooter() {
             <FooterInfiniteScroll />
             <div className="px-4 md:px-6 xl:px-7.5">
                 <section className="gap-7.5 flex flex-col">
-                    <p className="paragraph-large text-grey-200 md:paragraph-xx-large">
+                    <p className="paragraph-large md:paragraph-xx-large">
                         {translations.footer_contact_description[hephagency_config.language]}
                     </p>
                     <HephagencyButtonLink

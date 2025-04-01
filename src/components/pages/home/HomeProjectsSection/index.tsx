@@ -17,7 +17,7 @@ export default function HomeProjectsSection() {
                         {translations.home_projects[hephagency_config.language]}
                     </p>
                     <HephagencyButtonLink
-                    href="#"
+                    href="/projects"
                     className="w-fit"
                     >
                         {translations.home_projects_cta[hephagency_config.language]}

@@ -46,7 +46,7 @@ export default async function BlogCategory({ params, searchParams }: BlogCategor
     return (
         <BlogLayout
             categories={categories}
-            banner="https://picsum.photos/1920/1080?random=1"
+            banner={find.thumbnail}
             title={title}
             currentPage={page}
             totalPages={totalPages}

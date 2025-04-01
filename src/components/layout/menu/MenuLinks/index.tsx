@@ -26,7 +26,7 @@ export default function MenuLinks({linkClassName, parentElement}: MenuLinksProps
             children: translations.blog[hephagency_config.language],
         },
         {
-            href: "#",
+            href: "/projects",
             children: translations.projects[hephagency_config.language],
         },
         {

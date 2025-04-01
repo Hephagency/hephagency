@@ -1,0 +1,32 @@
+{
+    "projects_title":{
+        "fr": "Nos projets",
+        "en": "Our projects"
+    },
+    "projects_heading_text":{
+        "fr":{
+            "text":"Agence créant des solutions de design évolutives dans le domaine, du développement, du webdesign, et du branding. Nos forgeons des solutions claires, de simples et logiques.",
+            "highlight":[
+                "claires",
+                "simples",
+                "logiques"
+            ]
+        },
+        "en": {
+            "text": "Agency creating scalable design solutions in the field of development, web design, and branding. We forge clear, simple, and logical solutions.",
+            "highlight": [
+                "clear",
+                "simple",
+                "logical"
+            ]
+        }
+    },
+    "projects_all":{
+        "fr":"Tous les projets",
+        "en":"All projects"
+    },
+    "projects_archive_text":{
+        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+}
