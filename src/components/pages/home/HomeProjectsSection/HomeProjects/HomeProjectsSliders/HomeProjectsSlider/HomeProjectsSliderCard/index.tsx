@@ -14,7 +14,7 @@ interface HomeProjectsSliderCardProps {
 export default function HomeProjectsSliderCard({ project, className }: HomeProjectsSliderCardProps) {
     return (
         <Link
-        href="#"
+        href={`/projects/work/${project.slug}`}
         className={clsx(
             "flex flex-col w-62.5 gap-2.5 hover:bg-grey-dark hover:text-grey-light transition-all group xl:p-2",
             className

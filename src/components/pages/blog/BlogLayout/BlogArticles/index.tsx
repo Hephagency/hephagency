@@ -29,7 +29,7 @@ export default function BlogArticles({ articles }: BlogArticlesProps) {
                     index !== articles.length - 1 && "border-b border-current md:border-b-0",
                 )}>
                     <Link
-                        href={`/blog/articles/${article.slug}`}
+                        href={`/blog/article/${article.slug}`}
                         className="paragraph-p flex w-full justify-between gap-4 py-3 md:gap-12.5 md:py-0"
                     >
                         <span className="flex gap-4 grow basis-0 justify-between items-center md:grow-6 xl:grow-8">

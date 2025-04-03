@@ -30,7 +30,7 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
 
     return (
         <Link 
-        href={`/blog/articles/${article.slug}`}
+        href={`/blog/article/${article.slug}`}
         className={clsx(
             "group flex flex-col gap-2 xl:gap-5",
             className

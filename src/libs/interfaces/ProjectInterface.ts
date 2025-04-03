@@ -10,4 +10,9 @@ export default interface ProjectInterface{
     excerpt: string;
     categories: CategoryInterface[];
     language: LanguageType;
+    slug: string;
+    heading_image: string;
+    description: string;
+    url?: string;
+    customer?: string;
 }

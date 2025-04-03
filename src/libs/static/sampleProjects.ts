@@ -21,7 +21,11 @@ const sampleProjects : ProjectInterface[] = [
         language: "fr",
         categories: getRandomCategories(),
         excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-
+        slug: "project-one",
+        heading_image: "https://picsum.photos/1920/1080?random=1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        url: "https://example.com/project-one",
+        customer: "Acme Corporation"
     },
     {
         id: 2,
@@ -31,7 +35,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Two",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        excerpt: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        slug: "project-two",
+        heading_image: "https://picsum.photos/1920/1080?random=2",
+        description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        customer: "Acme Corporation"
     },
     {
         id: 3,
@@ -41,7 +49,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Three",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        slug: "project-three",
+        heading_image: "https://picsum.photos/1920/1080?random=3",
+        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        url: "https://example.com/project-three"
     },
     {
         id: 4,
@@ -51,7 +63,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Four",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        excerpt: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        slug: "project-four",
+        heading_image: "https://picsum.photos/1920/1080?random=4",
+        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        customer: "TechStart Inc."
     },
     {
         id: 5,
@@ -61,7 +77,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Five",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        slug: "project-five",
+        heading_image: "https://picsum.photos/1920/1080?random=5",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+        url: "https://example.com/project-five"
     },
     {
         id: 6,
@@ -71,7 +91,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Six",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+        excerpt: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+        slug: "project-six",
+        heading_image: "https://picsum.photos/1920/1080?random=6",
+        description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        customer: "Global Solutions Ltd."
     },
     {
         id: 7,
@@ -81,7 +105,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Seven",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        slug: "project-seven",
+        heading_image: "https://picsum.photos/1920/1080?random=7",
+        description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        url: "https://example.com/project-seven"
     },
     {
         id: 8,
@@ -91,7 +119,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Eight",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+        excerpt: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        slug: "project-eight",
+        heading_image: "https://picsum.photos/1920/1080?random=8",
+        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+        customer: "Innovation Partners"
     },
     {
         id: 9,
@@ -101,7 +133,11 @@ const sampleProjects : ProjectInterface[] = [
         title: "Project Nine",
         language: "fr",
         categories: getRandomCategories(),
-        excerpt: "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."
+        excerpt: "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+        slug: "project-nine",
+        heading_image: "https://picsum.photos/1920/1080?random=9",
+        description: "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+        url: "https://example.com/project-nine"
     }
 ];
 

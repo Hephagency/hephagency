@@ -7,6 +7,7 @@ import contact from "./contact.json";
 import blog from "./blog.json";
 import projects from "./projects.json";
 import article from "./article.json";
+import work from "./work.json";
 export default {
     ...global,
     ...links,
@@ -16,5 +17,6 @@ export default {
     ...contact,
     ...blog,
     ...projects,
-    ...article
+    ...article,
+    ...work
 }

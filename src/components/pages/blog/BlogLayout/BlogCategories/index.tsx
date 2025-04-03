@@ -9,9 +9,10 @@ import clsx from "clsx";
 interface BlogCategoriesProps {
     categories: CategoryInterface[];
     className?: string;
+    isProjects?: boolean;
 }
 
-export default function BlogCategories({ categories, className }: BlogCategoriesProps) {
+export default function BlogCategories({ categories, className, isProjects = false }: BlogCategoriesProps) {
     return (
         <ul className={clsx(
             "flex gap-5 flex-wrap",
@@ -21,7 +22,7 @@ export default function BlogCategories({ categories, className }: BlogCategories
                 <li key={category.id}>
                     <HephagencySmallButtonLink
                     scroll={false}
-                    href={`/blog/${category.slug}`}
+                    href={isProjects ? `/projects/${category.slug}` : `/blog/${category.slug}`}
                     >
                         {category.label}
                     </HephagencySmallButtonLink>
