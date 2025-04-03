@@ -1,9 +1,18 @@
 import LanguageType from "../types/LanguageType";
 import CategoryInterface from "./CategoryInterface";
 
-interface ArticleSectionInterface {
-    content?: string;
-    image?: string;
+export interface ArticleSectionInterface {
+    title?: string;
+    content: {
+        text?: string;
+        grow: number;
+    };
+    image : {
+        src: string;
+        alt: string;
+        grow: number;
+    };
+    flexDirection: "row" | "col" | "row-reverse" | "col-reverse";
 }
 
 export default interface ArticleInterface{

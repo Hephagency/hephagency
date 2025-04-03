@@ -13,8 +13,8 @@ interface HomeBlogArticleCardProps {
 }
 
 export default function HomeBlogArticleCard({ article, className }: HomeBlogArticleCardProps) {
-    const picturedSections = article.sections.filter((section) => section.image !== undefined);
-    const randomImage = picturedSections.length > 0 ? picturedSections[Math.floor(Math.random() * picturedSections.length)].image : null;
+    const picturedSections = article.sections.filter((section) => section.image.src !== undefined);
+    const randomImage = picturedSections.length > 0 ? picturedSections[Math.floor(Math.random() * picturedSections.length)].image.src : null;
 
     // Get the article date depending on the env language
     function getArticleDate(){
@@ -30,7 +30,7 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
 
     return (
         <Link 
-        href="#"
+        href={`/blog/articles/${article.slug}`}
         className={clsx(
             "group flex flex-col gap-2 xl:gap-5",
             className
