@@ -7,6 +7,7 @@ import { ReactNode } from "react";
 import clsx from "clsx";
 import HephagencyFooter from "@/components/layout/HephagencyFooter";
 import ReactLenis from "lenis/react";
+import Loader from "@/components/global/Loader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -40,6 +41,7 @@ export default function RootLayout({
     >
       <ReactLenis root>
         <body className="font-inter bg-grey-dark text-grey-light">
+          <Loader/>
           <HephagencyHeader />
           {children}
           <HephagencyFooter />

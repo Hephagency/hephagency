@@ -8,6 +8,7 @@ import blog from "./blog.json";
 import projects from "./projects.json";
 import article from "./article.json";
 import work from "./work.json";
+import loader from "./loader.json";
 export default {
     ...global,
     ...links,
@@ -18,5 +19,6 @@ export default {
     ...blog,
     ...projects,
     ...article,
-    ...work
+    ...work,
+    ...loader
 }
