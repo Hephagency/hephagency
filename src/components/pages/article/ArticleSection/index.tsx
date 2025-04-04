@@ -44,7 +44,7 @@ export default function ArticleSection({ section }: ArticleSectionProps) {
                 )}
             >
                 <div className="flex flex-col gap-2 sticky top-1/6 xl:gap-3">
-                    {section.title && <h2 className="paragraph-small">{section.title}</h2>}
+                    {section.title && <h2 className="paragraph-small text-grey-300">{section.title}</h2>}
                     {section.content.text && <div className="paragraph-p xl:paragraph-large"
                         dangerouslySetInnerHTML={{
                             __html: section.content.text

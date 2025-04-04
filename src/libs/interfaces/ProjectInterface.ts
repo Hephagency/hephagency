@@ -1,6 +1,17 @@
 import LanguageType from "../types/LanguageType";
 import CategoryInterface from "./CategoryInterface";
 
+export interface ProjectSectionInterface{
+    texts: string[];
+    images: {
+        src: string;
+        alt: string;    
+    }[];
+    title?: string;
+    type: "large-image" | "grid" | "one-third" | "centered-texts";
+    mirror?: boolean;
+}
+
 export default interface ProjectInterface{
     id: number;
     created_at: string;
@@ -15,4 +26,5 @@ export default interface ProjectInterface{
     description: string;
     url?: string;
     customer?: string;
+    sections: ProjectSectionInterface[];
 }
