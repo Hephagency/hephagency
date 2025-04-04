@@ -18,6 +18,7 @@ import HephagencyButtonLink from "@/components/global/buttons/HephagencyButtonLi
 import 'swiper/css';
 import clsx from "clsx";
 import { footerLinkClassName } from "@/components/layout/HephagencyFooter/FooterLink";
+import ContactSliderProgress from "./ContactSliderProgress";
 
 /**
  * A React component that renders a slider for the contact page.
@@ -249,6 +250,15 @@ export default function ContactSlider() {
                         </SwiperSlide>
                     )}
                 </Swiper>
+                <div className="px-4 md:px-6 xl:px-7.5 xl:max-w-296 xl:mx-auto">
+                    <ContactSliderProgress
+                        currentSlide={currentSlideIndex}
+                        totalSlides={slides.length}
+                        className={clsx(
+                            currentSlideIndex > 0 ? "opacity-100" : "opacity-0"
+                        )}
+                    />
+                </div>
             </form>
         </section>
     )
