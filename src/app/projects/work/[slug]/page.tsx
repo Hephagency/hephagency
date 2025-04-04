@@ -10,7 +10,11 @@ import WorkGridSection from "@/components/pages/work/sections/WorkGridSection";
 import WorkOneThirdSection from "@/components/pages/work/sections/WorkOneThirdSection";
 import WorkCenteredTextsSection from "@/components/pages/work/sections/WorkCenteredTextsSection";
 import { Fragment } from "react";
-
+import WorkThumbnail from "@/components/pages/work/WorkThumbnail";
+import sampleCategories from "@/libs/static/sampleCategories";
+import ProjectsLayout from "@/components/pages/projects/ProjectsLayout";
+import translations from "@/libs/translations/translations";
+import hephagency_config from "@/libs/hephagency_config";
 interface ProjectWorkPageProps {
     params: Promise<{
         slug: string;
@@ -25,7 +29,13 @@ export default async function ProjectWorkPage({ params }: ProjectWorkPageProps) 
         notFound();
     }
 
+    //THe projects which are not in the same categories than the current one
+    const similarProjects = sampleProjects.filter(project => project.categories.some(category => project.categories.includes(category)));
+
+    const otherCategories = sampleCategories.filter(category => !project?.categories.includes(category));
+
     return (
+        <>
         <div className="px-4 md:px-6 xl:px-7.5 gap-18 md:gap-26 flex flex-col">
             <WorkHeadingSection project={project} />
             <div className="flex flex-col gap-51 md:gap-37">
@@ -38,7 +48,14 @@ export default async function ProjectWorkPage({ params }: ProjectWorkPageProps) 
                 </Fragment>
                 )}
             </div>
+            <WorkThumbnail project={project} />
         </div>
+        <ProjectsLayout
+        projects={similarProjects}
+        categories={otherCategories}
+        title={translations.work_same_categories[hephagency_config.language]}
+        />
+        </>
     )
     
     

@@ -38,7 +38,12 @@ const sampleProjects : ProjectInterface[] = [
             },
             {
                 type: "centered-texts",
-                texts: ["Innovative Solutions", "Cutting-edge Technology", "Exceptional Results"],
+                mirror: true,
+                texts: [
+                    "Our innovative solutions have transformed the way Acme Corporation handles their core business processes, leading to a 45% increase in operational efficiency and significant cost savings across multiple departments.",
+                    "By implementing cutting-edge technology solutions, including AI-powered analytics and cloud-based infrastructure, we've enabled real-time decision making and seamless scalability for future growth.",
+                    "The exceptional results achieved through this project include a 200% ROI within the first year, improved customer satisfaction scores, and recognition as an industry leader in digital transformation."
+                ],
                 title: "Key Achievements",
                 images: []
             },
@@ -67,8 +72,31 @@ const sampleProjects : ProjectInterface[] = [
                 images: [{
                     src: "https://picsum.photos/800/600?random=15",
                     alt: "Project phases image"
+                },
+                {
+                    src: "https://picsum.photos/800/600?random=16", 
+                    alt: "Development process image"
+                },
+                {
+                    src: "https://picsum.photos/800/600?random=17",
+                    alt: "Launch phase image"
+                },
+                {
+                    src: "https://picsum.photos/800/600?random=18",
+                    alt: "Quality assurance image" 
+                },
+                {
+                    src: "https://picsum.photos/800/600?random=19",
+                    alt: "Client feedback image"
                 }],
-                texts: ["Planning", "Development", "Launch"]
+                mirror: true,
+                texts: [
+                    "Our comprehensive planning phase involves thorough requirements gathering, stakeholder interviews, and detailed project scoping to ensure alignment with business objectives.",
+                    "During development, our expert team leverages cutting-edge technologies and agile methodologies to build robust, scalable solutions that exceed expectations.", 
+                    "The launch phase encompasses rigorous testing, seamless deployment, and dedicated post-launch support to ensure optimal performance and user satisfaction.",
+                    "Our rigorous quality assurance process includes automated testing, performance optimization, and security audits to deliver a flawless end product.",
+                    "We maintain open communication channels with clients throughout the project lifecycle, incorporating feedback and making iterative improvements to exceed expectations."
+                ]
             }
         ]
     },

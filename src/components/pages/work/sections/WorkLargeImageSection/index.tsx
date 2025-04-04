@@ -28,7 +28,7 @@ export default function WorkLargeImageSection({section}: WorkLargeImageSectionPr
                     )}
                 </div>
             </div>
-            <div className="xl:grow xl:basis-0 paragraph-p">
+            <div className="xl:grow xl:basis-0 paragraph-p md:paragraph-large">
                 <div className="flex flex-col gap-2.5 md:grid md:grid-cols-2 xl:flex xl:gap-5 xl:sticky xl:top-1/6 md:gap-7.5">
                     {section.texts.map((text,index)=>
                     <Fragment key={index}>

@@ -10,5 +10,9 @@
     "work_customer":{
         "fr": "Client",
         "en": "Customer"
+    },
+    "work_same_categories":{
+        "fr": "Catégories similaires",
+        "en": "Same categories"
     }
 }
