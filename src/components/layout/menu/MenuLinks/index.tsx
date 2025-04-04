@@ -5,13 +5,14 @@ import { createElement } from "react";
 interface MenuLinksProps{
     linkClassName?: string;
     parentElement?: string;
+    hideLoader?: boolean;
 }
 
 /**
  * A collection of links in the Hephagency menu
  */
 
-export default function MenuLinks({linkClassName, parentElement}: MenuLinksProps){
+export default function MenuLinks({linkClassName, parentElement, hideLoader}: MenuLinksProps){
     const links : MenuLinkProps[] = [
         {
             href: "/",
@@ -36,8 +37,8 @@ export default function MenuLinks({linkClassName, parentElement}: MenuLinksProps
     ];
 
     const children = parentElement ?
-    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName}/>)) :
-    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName}/>);
+    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName} hideLoader={hideLoader}/>)) :
+    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName} hideLoader={hideLoader}/>);
 
     return (
         <>

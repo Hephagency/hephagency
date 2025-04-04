@@ -28,8 +28,8 @@ export default function ContactLinks({linkClassName, parentElement}: ContactLink
         }
     ]
     const children = parentElement ?
-    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName}/>)) :
-    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName}/>);
+    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName} hideLoader={true}/>)) :
+    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName} hideLoader={true}/>);
 
     return (
         <>

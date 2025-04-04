@@ -41,7 +41,8 @@ export default function HephagencyMenu(){
                 const negativeRemovalsElements = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
                 const inWindow = Array.from(negativeRemovalsElements).some((element) => {
                     const rect = element.getBoundingClientRect();
-                    return rect.top <= headerHeight && rect.bottom >= headerHeight;
+                    console.log(rect);
+                    return rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > headerHeight;
                 });
                 setIsNegative(!inWindow);
             }
@@ -108,6 +109,7 @@ export default function HephagencyMenu(){
                 <MenuLinks
                 parentElement="li" 
                 linkClassName="paragraph-large underline underline-offset-6 transition-all hover:opacity-50"
+                hideLoader={true}
                 />
             </ul>
             <div>

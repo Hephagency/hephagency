@@ -10,9 +10,10 @@ interface BlogCategoriesProps {
     categories: CategoryInterface[];
     className?: string;
     isProjects?: boolean;
+    hideLoader?: boolean;
 }
 
-export default function BlogCategories({ categories, className, isProjects = false }: BlogCategoriesProps) {
+export default function BlogCategories({ categories, className, isProjects = false, hideLoader = false }: BlogCategoriesProps) {
     return (
         <ul className={clsx(
             "flex gap-5 flex-wrap",
@@ -23,6 +24,7 @@ export default function BlogCategories({ categories, className, isProjects = fal
                     <HephagencySmallButtonLink
                     scroll={false}
                     href={isProjects ? `/projects/${category.slug}` : `/blog/${category.slug}`}
+                    hideLoader={hideLoader}
                     >
                         {category.label}
                     </HephagencySmallButtonLink>

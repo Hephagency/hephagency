@@ -5,7 +5,7 @@
 import hephagency_config from "@/libs/hephagency_config";
 import ArticleInterface from "@/libs/interfaces/ArticleInterface";
 import clsx from "clsx";
-import Link from "next/link";
+import LoaderLink from "@/components/global/Loader/LoaderLink";
 
 interface HomeBlogArticleCardProps {
     article: ArticleInterface;
@@ -29,7 +29,7 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
     }
 
     return (
-        <Link 
+        <LoaderLink
         href={`/blog/article/${article.slug}`}
         className={clsx(
             "group flex flex-col gap-2 xl:gap-5",
@@ -72,6 +72,6 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
                     {article.excerpt} 
                 </p>
             </div>
-        </Link>
+        </LoaderLink>
     )
 }

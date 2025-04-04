@@ -2,9 +2,9 @@
  * A Component to display the blog articles
  */
 
+import LoaderLink from "@/components/global/Loader/LoaderLink";
 import ArticleInterface from "@/libs/interfaces/ArticleInterface";
 import clsx from "clsx";
-import Link from "next/link";
 
 interface BlogArticlesProps {
     articles: ArticleInterface[];
@@ -28,7 +28,7 @@ export default function BlogArticles({ articles }: BlogArticlesProps) {
                 className={clsx(
                     index !== articles.length - 1 && "border-b border-current md:border-b-0",
                 )}>
-                    <Link
+                    <LoaderLink
                         href={`/blog/article/${article.slug}`}
                         className="paragraph-p flex w-full justify-between gap-4 py-3 md:gap-12.5 md:py-0"
                     >
@@ -44,7 +44,7 @@ export default function BlogArticles({ articles }: BlogArticlesProps) {
                         <span className="text-end hidden md:inline-block md:grow-2 md:basis-0 xl:grow-4 xl:text-center">
                             {article.categories.map(({ label }) => label).join(", ")}
                         </span>
-                    </Link>
+                    </LoaderLink>
                 </li>
             ))}
         </ul>

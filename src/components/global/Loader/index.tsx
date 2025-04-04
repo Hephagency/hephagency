@@ -8,6 +8,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 /**
  * A React component that renders a loader.
@@ -40,13 +41,18 @@ export default function Loader(){
         }
     ];
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
-    const [displayLoader, setDisplayLoader] = useState(true);
     const currentStep = steps[currentStepIndex];
-    const cycleTime = 2;
-    const transitionDuration = 0.5;
+    const cycleTime = hephagency_config.loaderDuration;
+    
+    const [previousPathname, setPreviousPathname] = useState<string | null>(null);
+    const pathname = usePathname();
 
-    const containerRef = useRef<HTMLDivElement>(null);
+    function hideLoader(){
+        const loader = document.getElementById("hephagency-loader");
+        if(loader){
+            loader.style.scale = "0";
+        }
+    }
 
     useEffect(()=>{
         const interval = setInterval(()=>{
@@ -55,34 +61,21 @@ export default function Loader(){
         return ()=>clearInterval(interval);
     },[steps]);
 
-
     useEffect(()=>{
-        setDisplayLoader(true);
-    },[isLoading]);
-
-
-    useGSAP(()=>{
-        if(containerRef.current){
-            gsap.to(containerRef.current,{
-                scale: isLoading ? 1 : 0,
-                duration: transitionDuration,
-                onComplete: ()=>{
-                    if(!isLoading){
-                        setDisplayLoader(false);
-                    }
-                }
-            });
+        if(!previousPathname){
+            const timeout = setTimeout(hideLoader,cycleTime * 1000);
+            setPreviousPathname(pathname);
+            return ()=>clearTimeout(timeout);
+        } else if(previousPathname !== pathname){
+            hideLoader();
+            setPreviousPathname(pathname);
         }
-    },[isLoading,containerRef.current]);
-
-    if(!displayLoader){
-        return null;
-    }
+    },[pathname]);
 
     return (
         <div 
-        className="fixed z-90 top-0 left-0 w-full h-full bg-grey-dark text-grey-light flex items-center justify-center origin-top-left"
-        ref={containerRef}
+        className="fixed z-90 top-0 left-0 w-full h-full bg-grey-dark text-grey-light flex items-center justify-center origin-top-left transition-all duration-500"
+        id="hephagency-loader"
         >
             <div className="flex flex-col items-center justify-center gap-y-8 md:gap-y-12">
                 <LoaderIconAnimation duration={cycleTime}/>

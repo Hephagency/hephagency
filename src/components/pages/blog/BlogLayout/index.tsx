@@ -48,7 +48,7 @@ export default function BlogLayout({
                 {translations.blog_last_articles[hephagency_config.language]}
             </h2>
             <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between md:mb-4 xl:mb-8">
-                <BlogCategories categories={categories} />
+                <BlogCategories categories={categories} hideLoader={true} />
                 <BlogPagination 
                 category={category}
                 currentPage={currentPage}

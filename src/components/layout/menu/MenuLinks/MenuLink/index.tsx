@@ -1,26 +1,24 @@
-import clsx from "clsx";
-import Link from "next/link";
+import LoaderLink from "@/components/global/Loader/LoaderLink";
 
 export interface MenuLinkProps{
     href: string;
     children: string;
     className?: string;
+    hideLoader?: boolean;
 }
 
 /**
  * A link in the Hephagency menu
  */
 
-export default function MenuLink({href, children, className}: MenuLinkProps){
+export default function MenuLink({href, children, className, hideLoader}: MenuLinkProps){
     return (
-        <Link 
+        <LoaderLink
         href={href}
-        className={clsx(
-            "",
-            className
-        )}
+        className={className}
+        hideLoader={hideLoader}
         >
             {children}
-        </Link>
+        </LoaderLink>
     )
 }

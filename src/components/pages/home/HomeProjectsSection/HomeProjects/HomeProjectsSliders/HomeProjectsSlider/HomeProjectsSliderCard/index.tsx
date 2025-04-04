@@ -2,9 +2,9 @@
  * A Component to display a card in the home projects slider
  */
 
+import LoaderLink from "@/components/global/Loader/LoaderLink";
 import ProjectInterface from "@/libs/interfaces/ProjectInterface";
 import clsx from "clsx";
-import Link from "next/link";
 
 interface HomeProjectsSliderCardProps {
     project: ProjectInterface;
@@ -13,7 +13,7 @@ interface HomeProjectsSliderCardProps {
 
 export default function HomeProjectsSliderCard({ project, className }: HomeProjectsSliderCardProps) {
     return (
-        <Link
+        <LoaderLink
         href={`/projects/work/${project.slug}`}
         className={clsx(
             "flex flex-col w-62.5 gap-2.5 hover:bg-grey-dark hover:text-grey-light transition-all group xl:p-2",
@@ -38,6 +38,6 @@ export default function HomeProjectsSliderCard({ project, className }: HomeProje
             <p className="paragraph-small"> 
                 {project.excerpt}
             </p>
-        </Link>
+        </LoaderLink>
     )
 }

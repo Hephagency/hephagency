@@ -4,8 +4,7 @@
 
 import ProjectInterface from "@/libs/interfaces/ProjectInterface";
 import clsx from "clsx";
-import Link from "next/link";
-
+import LoaderLink from "@/components/global/Loader/LoaderLink";
 interface ProjectsSliderCardProps {
     project: ProjectInterface;
     className?: string;
@@ -13,7 +12,7 @@ interface ProjectsSliderCardProps {
 
 export default function ProjectsSliderCard({ project, className }: ProjectsSliderCardProps) {
     return (
-        <Link
+        <LoaderLink
             href={`/projects/work/${project.slug}`}
             className={clsx(
                 "flex flex-col w-full gap-3.5 xl:gap-5 transition-all duration-500 group",
@@ -38,6 +37,6 @@ export default function ProjectsSliderCard({ project, className }: ProjectsSlide
             <p className="paragraph-small">
                 {project.excerpt}
             </p>
-        </Link>
+        </LoaderLink>
     )
 }

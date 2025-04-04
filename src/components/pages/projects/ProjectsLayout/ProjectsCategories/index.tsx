@@ -17,6 +17,7 @@ export default function ProjectsCategories({ categories }: ProjectsCategoriesPro
                     <HephagencySmallButtonLink
                     scroll={false}
                     href={`/projects/${category.slug}`}
+                    hideLoader={true}
                     >
                         {category.label}
                     </HephagencySmallButtonLink>
