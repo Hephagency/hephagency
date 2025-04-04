@@ -12,7 +12,7 @@ import gsap from "gsap";
 import { useLenis } from "lenis/react";
 
 export default function HomeLandingSection() {
-    const scrollHeight = 2000;
+    const scrollHeight = 3000;
     const containerRef = useRef<HTMLDivElement>(null);
     const parentRef = useRef<HTMLDivElement>(null);
     const timelineRef = useRef<GSAPTimeline>(null);

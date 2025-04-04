@@ -30,5 +30,13 @@
     "home_blog_intro": {
         "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "home_landing_title_first":{
+        "fr":"Votre idée",
+        "en":"Your idea"
+    },
+    "home_landing_title_second":{
+        "fr":"Notre créativité",
+        "en":"Our creativity"
     }
 }
