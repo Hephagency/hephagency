@@ -41,7 +41,6 @@ export default function HephagencyMenu(){
                 const negativeRemovalsElements = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
                 const inWindow = Array.from(negativeRemovalsElements).some((element) => {
                     const rect = element.getBoundingClientRect();
-                    console.log(rect,headerHeight);
                     return rect.top <= headerHeight && rect.bottom >= headerHeight;
                 });
                 setIsNegative(!inWindow);

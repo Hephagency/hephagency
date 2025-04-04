@@ -10,7 +10,7 @@ import hephagency_config from "@/libs/hephagency_config";
 
 export default function HomeSplinePlayground(){
     return (
-        <section className="overflow-hidden w-full h-dvh flex flex-col justify-center items-center bg-white">
+        <section className="overflow-hidden w-dvw h-dvh flex flex-col justify-center items-center bg-white">
             <div className="relative max-w-full flex justify-center items-center max-h-full">
                 <HomeSplinePlaygroundCircle className="min-w-150 xl:min-w-345 h-auto"/>
                 <HomeSplineScene/>
