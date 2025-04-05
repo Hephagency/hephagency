@@ -18,8 +18,8 @@ export default function WorkHeadingSection({ project }: WorkHeadingSectionProps)
     return (
         <section className="flex flex-col gap-18 pt-37 md:h-dvh md:flex-row md:pb-6 md:gap-6 md:relative md:pt-32 xl:pt-30">
             <div className="md:pb-20 xl:grow xl:basis-0 xl:min-h-full xl:pb-0">
-                <div className="flex flex-col gap-7.5 md:sticky md:top-1/7 xl:static xl:h-full">
-                    <div className="flex flex-col gap-7.5 xl:sticky xl:top-1/7 xl:pb-20">
+                <div className="flex flex-col gap-7.5 md:sticky md:top-1/10 xl:static xl:h-full">
+                    <div className="flex flex-col gap-7.5 xl:sticky xl:top-1/10 xl:pb-20">
                         <div className="flex flex-col gap-4">
                             <h1 className="h5">
                                 {project.title}
@@ -32,9 +32,14 @@ export default function WorkHeadingSection({ project }: WorkHeadingSectionProps)
                                     src={project.heading_image}
                                     alt={project.title}
                                     className="w-full aspect-36/55 object-cover md:hidden" />
-                                <p className="paragraph-p">
-                                    {project.description}
-                                </p>
+                                <div 
+                                className="paragraph-p"
+                                dangerouslySetInnerHTML={
+                                    {
+                                        __html: project.description
+                                    }
+                                }
+                                />
                             </div>
                         </div>
                     </div>
@@ -58,7 +63,7 @@ export default function WorkHeadingSection({ project }: WorkHeadingSectionProps)
                 />
             </div>
             <div className="md:absolute md:bottom-6 md:left-0 xl:static xl:grow xl:basis-0">
-                <div className="flex gap-7.5 xl:sticky xl:top-1/7">
+                <div className="flex gap-7.5 xl:sticky xl:top-1/10">
                     <ArticleHeadingInformation
                         title={translations.work_release_date[hephagency_config.language]}
                         content={new Date(project.created_at).toLocaleDateString(hephagency_config.language)}

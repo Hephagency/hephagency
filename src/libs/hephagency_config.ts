@@ -13,4 +13,5 @@ export default {
     transitionDuration: 0.5,
     loaderDuration: 2,
     negativeRemovalClassName: "negative-none",
+    apiUrl: process.env.NEXT_PUBLIC_API_URL,
 }

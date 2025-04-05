@@ -3,4 +3,5 @@ export default interface CategoryInterface{
     label: string;
     slug: string;
     thumbnail: string;
+    description: string;
 }

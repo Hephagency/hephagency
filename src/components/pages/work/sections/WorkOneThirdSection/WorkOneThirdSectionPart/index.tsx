@@ -29,9 +29,9 @@ export default function WorkOneThirdSectionPart({title, text, image, className}:
             className="w-full h-auto"
             />
             }
-            <div>
+            <div className="flex flex-col gap-1">
                 {title && (
-                    <h2>
+                    <h2 className="text-grey-300 paragraph-small">
                         {title}
                     </h2>
                 )}

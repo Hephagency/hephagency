@@ -30,5 +30,9 @@
     "not_found_error":{
         "fr":"404",
         "en":"404"
+    },
+    "loading":{
+        "fr":"Chargement...",
+        "en":"Loading..."
     }
 }

@@ -860,9 +860,8 @@ class ImageTrailVariant6 {
           duration: 0.8,
           ease: "power3",
           scale: scaleFactor,
-          filter: `grayscale(${grayscaleValue * 100}%) brightness(${
-            brightnessValue * 100
-          }%) blur(${blurValue}px)`,
+          filter: `grayscale(${grayscaleValue * 100}%) brightness(${brightnessValue * 100
+            }%) blur(${blurValue}px)`,
           x: this.mousePos.x - (img.rect?.width ?? 0) / 2,
           y: this.mousePos.y - (img.rect?.height ?? 0) / 2,
         },
@@ -989,6 +988,10 @@ class ImageTrailVariant7 {
       this.imgPosition < this.imagesTotal - 1 ? this.imgPosition + 1 : 0;
     const img = this.images[this.imgPosition];
     ++this.visibleImagesCount;
+
+    if(!img){
+      return;
+    }
 
     gsap.killTweensOf(img.DOM.el);
     const scaleValue = gsap.utils.random(0.5, 1.6);

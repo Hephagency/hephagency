@@ -25,7 +25,7 @@ export default function HomeProjectsSlider({ projects, horizontal, reverse }: Ho
     const containerRef = useRef<HTMLDivElement>(null);
 
     function duplicateProjects() {
-        const duplicateTimes =1;
+        const duplicateTimes = 1;
         const duplicatedProjects = [...projects];
         for (let i = 0; i < duplicateTimes; i++) {
             duplicatedProjects.push(...projects);

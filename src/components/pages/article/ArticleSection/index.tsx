@@ -30,7 +30,17 @@ export default function ArticleSection({ section }: ArticleSectionProps) {
                     section.image.grow === 0 && "hidden"
                 )}
             >
-                {section.image.src && <img src={section.image.src} alt={section.image.alt} className="w-full h-auto sticky top-1/6" />}
+                {section.image.src && 
+                <img 
+                src={section.image.src} 
+                alt={section.image.alt} 
+                className="w-full h-auto sticky top-1/6" 
+                style={
+                    {
+                        maxWidth: section.image.maxWidth
+                    }
+                }
+                />}
             </div>
             <div
                 style={
@@ -45,10 +55,18 @@ export default function ArticleSection({ section }: ArticleSectionProps) {
             >
                 <div className="flex flex-col gap-2 sticky top-1/6 xl:gap-3">
                     {section.title && <h2 className="paragraph-small text-grey-300">{section.title}</h2>}
-                    {section.content.text && <div className="paragraph-p xl:paragraph-large"
-                        dangerouslySetInnerHTML={{
-                            __html: section.content.text
-                        }}
+                    {section.content.text && 
+                    <div 
+                    className="paragraph-p xl:paragraph-large"
+                    style={
+                        {
+                            fontSize: section.content.fontSize,
+                            maxWidth: section.content.maxWidth
+                        }
+                    }
+                    dangerouslySetInnerHTML={{
+                        __html: section.content.text
+                    }}
                     />}
                 </div>
             </div>

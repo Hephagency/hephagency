@@ -1,18 +1,22 @@
 import LanguageType from "../types/LanguageType";
 import CategoryInterface from "./CategoryInterface";
 
+export type ArticleSectionFlexDirection = "row" | "col" | "row-reverse" | "col-reverse";
 export interface ArticleSectionInterface {
     title?: string;
     content: {
         text?: string;
         grow: number;
+        fontSize: number;
+        maxWidth?: number;
     };
     image : {
         src: string;
         alt: string;
         grow: number;
+        maxWidth?: number;
     };
-    flexDirection: "row" | "col" | "row-reverse" | "col-reverse";
+    flexDirection: ArticleSectionFlexDirection;
 }
 
 export default interface ArticleInterface{
@@ -24,7 +28,10 @@ export default interface ArticleInterface{
     excerpt: string;
     slug: string;
     author: string;
-    language: LanguageType;
     categories: CategoryInterface[];
     sections: ArticleSectionInterface[];
+    metadata: {
+        title: string;
+        description: string;
+    }
 }

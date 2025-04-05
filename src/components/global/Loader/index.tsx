@@ -9,6 +9,7 @@ import clsx from "clsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { usePathname } from "next/navigation";
+import { useLenis } from "lenis/react";
 
 /**
  * A React component that renders a loader.
@@ -50,9 +51,23 @@ export default function Loader(){
     function hideLoader(){
         const loader = document.getElementById("hephagency-loader");
         if(loader){
-            loader.style.scale = "0";
+            if(lenis){
+                if(loader.style.scale === "0"){
+                    return;
+                }
+                lenis.scrollTo(0,{
+                    onComplete: ()=>{
+                        loader.style.scale = "0";
+                    }
+                });
+            }
+            else {
+                loader.style.scale = "0";
+            }
         }
     }
+
+    const lenis = useLenis();
 
     useEffect(()=>{
         const interval = setInterval(()=>{

@@ -68,9 +68,14 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
                         </span>
                     </div>
                 </div>
-                <p className="paragraph-large mt-2 xl:mt-2.5">
-                    {article.excerpt} 
-                </p>
+                <p 
+                className="paragraph-large mt-2 xl:mt-2.5"
+                dangerouslySetInnerHTML={
+                    {
+                        __html: article.excerpt
+                    }
+                }
+                />
             </div>
         </LoaderLink>
     )

@@ -9,6 +9,7 @@ import translations from "@/libs/translations/translations";
 import BlogCategories from "./BlogCategories";
 import BlogPagination from "./BlogPagination";
 import BlogArticles from "./BlogArticles";
+import BlogHeading from "./BlogHeading";
 
 interface BlogLayoutProps {
     banner: string;
@@ -31,18 +32,10 @@ export default function BlogLayout({
 }: BlogLayoutProps) {
     return (
         <>
-        <section className="h-dvh flex flex-col justify-center items-center px-4 md:px-6 xl:px-7.5 mb-7 xl:pt-16">
-            <div className="flex flex-col sticky top-1/8 gap-6 md:gap-7 w-full xl:gap-4">
-                <img
-                src={banner}
-                alt={title}
-                className="aspect-square w-full object-cover md:aspect-7/5 xl:aspect-3/1"
-                />
-                <h1 className="h4 xl:h2">
-                    {title}
-                </h1>
-            </div>
-        </section>
+        <BlogHeading
+        banner={banner}
+        title={title}
+        />
         <section className="px-4 md:px-6 xl:px-7.5 flex flex-col gap-6">
             <h2 className="paragraph-x-large xl:paragraph-xx-large">
                 {translations.blog_last_articles[hephagency_config.language]}

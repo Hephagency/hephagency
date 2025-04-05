@@ -157,3 +157,28 @@ html{
   font-weight: var(--font-weight-light);
   text-transform: uppercase;
 }
+
+/*
+Customize the scrollbar
+The background of the scrollbar is transparent
+The thumb inverts the colors
+The thumb is thin
+*/
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange-500);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange-400);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-orange-300);
+}

@@ -34,9 +34,14 @@ export default function ProjectsSliderCard({ project, className }: ProjectsSlide
                     {project.title}
                 </h3>
             </div>
-            <p className="paragraph-small">
-                {project.excerpt}
-            </p>
+            <p 
+            className="paragraph-small"
+            dangerouslySetInnerHTML={
+                {
+                    __html: project.excerpt
+                }
+            }
+            />
         </LoaderLink>
     )
 }

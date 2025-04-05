@@ -1,22 +1,29 @@
+
 /**
  * The component that handle the slider in the Hephagency menu
  */
 
 import Caroussel from "@/components/global/Caroussel";
-import hephagency_config from "@/libs/hephagency_config";
-import sampleProjects from "@/libs/static/sampleProjects";
+import ProjectInterface from "@/libs/interfaces/ProjectInterface";
+import Link from "next/link";
 import { ReactNode } from "react";
 
-export default function HephagencyMenuSlider(){
-    const projects = sampleProjects.filter(({language})=>language === hephagency_config.language).slice(0,3);
+interface HephagencyMenuSliderProps{
+    projects : ProjectInterface[];
+}
+
+export default function HephagencyMenuSlider({projects} : HephagencyMenuSliderProps){
     const items : ReactNode[] = projects.map((project, index)=>
-        <div key={index} className="w-full h-full px-2.5 py-5">
+        <Link 
+        key={index} 
+        href={`/projects/work/${project.slug}`}
+        className="w-full h-full px-2.5 py-5 block">
             <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover absolute top-0 left-0"/>
             <div className="bg-gradient-to-b from-grey-dark to-transparent absolute w-full h-full top-0 left-0 z-10" />
             <h3 className="paragraph-x-large text-grey-light relative z-20">
                 {project.title}
             </h3>
-        </div>
+        </Link>
     );
 
     return (

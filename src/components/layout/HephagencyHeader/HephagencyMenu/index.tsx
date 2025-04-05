@@ -10,12 +10,16 @@ import MenuLinks from "../../menu/MenuLinks";
 import HephagencyMenuSlider from "./HephagencyMenuSlider";
 import { useLenis } from "lenis/react";
 import { usePathname } from "next/navigation";
-
+import ProjectInterface from "@/libs/interfaces/ProjectInterface";
 /**
  * The main menu component in the Hephagency design system
  */
 
-export default function HephagencyMenu(){
+interface HephagencyMenuProps{
+    projects : ProjectInterface[];
+}
+
+export default function HephagencyMenu({projects} : HephagencyMenuProps){
     // State for the menu
     const [menuOpen, setMenuOpen] = useState(false);
     const [isNegative, setIsNegative] = useState(true);
@@ -41,7 +45,6 @@ export default function HephagencyMenu(){
                 const negativeRemovalsElements = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
                 const inWindow = Array.from(negativeRemovalsElements).some((element) => {
                     const rect = element.getBoundingClientRect();
-                    console.log(rect);
                     return rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > headerHeight;
                 });
                 setIsNegative(!inWindow);
@@ -116,7 +119,7 @@ export default function HephagencyMenu(){
                 <h2 className="h6 mb-3 md:h5">
                     {translations.last_projects[hephagency_config.language]}
                 </h2>
-                <HephagencyMenuSlider/>
+                <HephagencyMenuSlider projects={projects}/>
             </div>
         </div>
         </>

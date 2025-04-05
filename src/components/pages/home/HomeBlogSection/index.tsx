@@ -6,8 +6,14 @@ import hephagency_config from "@/libs/hephagency_config";
 import translations from "@/libs/translations/translations";
 import HomeBlogArticles from "./HomeBlogArticles";
 import HephagencyButtonLink from "@/components/global/buttons/HephagencyButtonLink";
+import CategoryInterface from "@/libs/interfaces/CategoryInterface";
+import WPUtils from "@/libs/classes/WPUtils";
+interface HomeBlogSectionProps{
+    categories? : CategoryInterface[];
+}
 
-export default function HomeBlogSection() {
+export default async function HomeBlogSection({categories} : HomeBlogSectionProps) {
+    const articles = await WPUtils.getArticles(categories?.map(({id})=>id),3);
     return (
         <section className="flex flex-col px-4 py-12 gap-18 xl:gap-0 md:px-6 xl:px-7.5">
             <div className="flex flex-col gap-7.5 xl:flex-row xl:justify-between xl:min-h-80 xl:pb-16">
@@ -19,7 +25,7 @@ export default function HomeBlogSection() {
                 </p>
             </div>
             <div className="flex flex-col gap-14.5 items-center">
-                <HomeBlogArticles />
+                <HomeBlogArticles articles={articles} />
                 <HephagencyButtonLink
                     href="/blog"
                     linkClassName="w-fit"
