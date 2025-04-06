@@ -10,11 +10,11 @@ export default function FooterCopyrights(){
             children: translations.copyrights[hephagency_config.language]
         },
         {
-            href: "#",
+            href: "/mentions-legales",
             children: translations.legal_mentions[hephagency_config.language]
         },
         {
-            href: "#",
+            href: "/politique-de-confidentialite",
             children: translations.privacy_policy[hephagency_config.language]
         }
     ];

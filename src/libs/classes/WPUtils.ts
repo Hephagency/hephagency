@@ -1,6 +1,7 @@
 import hephagency_config from "../hephagency_config";
 import ArticleInterface, { ArticleSectionFlexDirection, ArticleSectionInterface } from "../interfaces/ArticleInterface";
 import CategoryInterface from "../interfaces/CategoryInterface";
+import PageInterface from "../interfaces/PageInterface";
 import ProjectInterface, { ProjectSectionInterface, ProjectSectionType } from "../interfaces/ProjectInterface";
 
 interface WPMediaInterface{
@@ -40,6 +41,7 @@ export default class WPUtils {
     static baseUrl = hephagency_config.apiUrl;
     static projectsPostType = "project";
     static articlesPostType = "posts";
+    static pagesPostType = "pages";
 
     static getCategories(){
         return new Promise<CategoryInterface[]>(async (resolve, reject) => {
@@ -309,6 +311,51 @@ export default class WPUtils {
                     },
                     flexDirection: acfArticleSection.flex_direction
                 })
+            } catch(error){
+                reject(error);
+            }
+        })
+    }
+
+    static getPageBySlug(slug : string){
+        return new Promise<PageInterface>(async (resolve, reject) => {
+            try {
+                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}?slug=${slug}`);
+                const data = await response.json();
+                if(data.length > 0){
+                    const wpPage = data[0];
+                    resolve({
+                        title: this.removeHTMLTags(wpPage.title.rendered),
+                        slug: wpPage.slug,
+                        content: wpPage.content.rendered,
+                        metadata: {
+                            title: wpPage.yoast_head_json.title,
+                            description: wpPage.yoast_head_json.description
+                        }
+                    })
+                }else{
+                    reject(new Error("Page not found"));
+                }
+            } catch(error){
+                reject(error);
+            }
+        })
+    }
+
+    static getPages(){
+        return new Promise<PageInterface[]>(async (resolve, reject) => {
+            try {
+                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}`);
+                const data = await response.json();
+                resolve(data.map((wpPage : any) => ({
+                    title: this.removeHTMLTags(wpPage.title.rendered),
+                    slug: wpPage.slug,
+                    content: wpPage.content.rendered,
+                    metadata: {
+                        title: wpPage.yoast_head_json.title,
+                        description: wpPage.yoast_head_json.description
+                    }
+                })));
             } catch(error){
                 reject(error);
             }
