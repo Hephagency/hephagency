@@ -13,5 +13,7 @@ export default {
     transitionDuration: 0.5,
     loaderDuration: 2,
     negativeRemovalClassName: "negative-none",
-    apiUrl: process.env.NEXT_PUBLIC_API_URL,
+    apiUrl: process.env.NEXT_PUBLIC_WORDPRESS_URL + "/wp-json/wp/v2",
+    contactFormId: process.env.NEXT_PUBLIC_CONTACT_FORM_ID,
+    contactFormUrl: process.env.NEXT_PUBLIC_WORDPRESS_URL + "/wp-json/contact-form-7/v1/contact-forms/" + process.env.NEXT_PUBLIC_CONTACT_FORM_ID + "/feedback",
 }

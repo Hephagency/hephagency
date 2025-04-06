@@ -39,6 +39,8 @@ interface ACFArticleSectionInterface{
 export default class WPUtils {
     //The base url of the api
     static baseUrl = hephagency_config.apiUrl;
+    static contactFormId = hephagency_config.contactFormId;
+    static contactFormUrl = hephagency_config.contactFormUrl;
     static projectsPostType = "project";
     static articlesPostType = "posts";
     static pagesPostType = "pages";
@@ -357,6 +359,35 @@ export default class WPUtils {
                     }
                 })));
             } catch(error){
+                reject(error);
+            }
+        })
+    }
+
+    static sendContactForm(data : {
+        first_name: string;
+        last_name: string;
+        email: string;
+        tel: string;
+        subject: string;
+        message: string;
+        discover: string;
+    }){
+        return new Promise<void>(async (resolve, reject) => {
+            //Convert the json to a form data
+            const formData = new FormData();
+            Object.entries(data).forEach(([key, value]) => {
+                formData.append(key, value);
+            });
+            formData.append("_wpcf7_unit_tag", `wpcf7-f${this.contactFormId}-o1`);
+            try {
+                const response = await fetch(this.contactFormUrl, {
+                    method: "POST",
+                    body: formData
+                });
+                const res = await response.json();
+                resolve(res);
+            } catch (error) {
                 reject(error);
             }
         })

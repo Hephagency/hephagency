@@ -7,7 +7,13 @@ import { useGSAP } from "@gsap/react";
 import HephagencySplineLogo from "../spline/HephagencySplineLogo";
 import { useRef } from "react";
 import gsap from "gsap";
-export default function CircleLoader() {
+import clsx from "clsx";
+
+interface CircleLoaderProps{
+    isNotInverted?: boolean;
+}
+
+export default function CircleLoader({isNotInverted = false}: CircleLoaderProps) {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
@@ -22,7 +28,11 @@ export default function CircleLoader() {
         }
     }, [containerRef])
     return (
-        <div ref={containerRef} className="w-full max-w-96 max-h-66 overflow-hidden flex flex-col justify-center items-center invert">
+        <div ref={containerRef} 
+        className={clsx(
+            "w-full max-w-96 max-h-66 overflow-hidden flex flex-col justify-center items-center",
+            !isNotInverted && "invert"
+        )}>
             <div className="w-full aspect-square">
                 <HephagencySplineLogo client />
             </div>

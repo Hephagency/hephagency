@@ -19,6 +19,8 @@ import 'swiper/css';
 import clsx from "clsx";
 import { footerLinkClassName } from "@/components/layout/HephagencyFooter/FooterLink";
 import ContactSliderProgress from "./ContactSliderProgress";
+import WPUtils from "@/libs/classes/WPUtils";
+import CircleLoader from "@/components/global/CircleLoader";
 
 /**
  * A React component that renders a slider for the contact page.
@@ -34,12 +36,20 @@ export default function ContactSlider() {
     const [lastName, setLastName] = useState<string>("");
     const [phoneNumber, setPhoneNumber] = useState<string>("");
 
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    const formRef = useRef<HTMLFormElement>(null);
+
     function nextSlide(e?: MouseEvent) {
         if(e){
             e.preventDefault();
         }
-        if (swiperRef.current) {
-            swiperRef.current.swiper.slideNext();
+        if (swiperRef.current && formRef.current) {
+            if(swiperRef.current.swiper.activeIndex === slides.length - 2){
+                formRef.current.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+            }else{
+                swiperRef.current.swiper.slideNext();
+            }
         }
     }
 
@@ -49,6 +59,29 @@ export default function ContactSlider() {
        }
         if (swiperRef.current) {
             swiperRef.current.swiper.slidePrev();
+        }
+    }
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
+        e.preventDefault();
+        setIsLoading(true);
+        try{
+            await WPUtils.sendContactForm({
+                first_name: firstName,
+                last_name: lastName,
+                email: email,
+                tel: phoneNumber,
+                subject: subject,
+                message: message,
+                discover: discovery
+            });
+            if(swiperRef.current){
+                swiperRef.current.swiper.slideNext();
+            }
+        } catch(err){
+            console.error(err);
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -159,6 +192,7 @@ export default function ContactSlider() {
                         value={lastName}
                         onValueChange={(value) => setLastName(value)}
                         name="first_name"
+                        required={true}
                     />
                     <ContactSliderField
                         type="text"
@@ -167,6 +201,7 @@ export default function ContactSlider() {
                         value={firstName}
                         onValueChange={(value) => setFirstName(value)}
                         name="last_name"
+                        required={true}
                     />
                     <ContactSliderField
                         className="md:col-span-2"
@@ -176,6 +211,7 @@ export default function ContactSlider() {
                         value={email}
                         onValueChange={(value) => setEmail(value)}
                         name="email"
+                        required={true}
                     />
                     <ContactSliderField
                         className="md:col-span-2"
@@ -185,6 +221,7 @@ export default function ContactSlider() {
                         value={phoneNumber}
                         onValueChange={(value) => setPhoneNumber(value)}
                         name="phone_number"
+                        required={true}
                     />
                 </div>,
             containerClassName: "bg-white",
@@ -231,11 +268,17 @@ export default function ContactSlider() {
             slides[currentSlideIndex].containerClassName,
         )}
         >
-            <form className="h-fit w-full absolute top-1/2 left-0 -translate-y-1/2 pt-8 md:pt-14.5 xl:pt-10">
+            <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="h-fit w-full absolute top-1/2 left-0 -translate-y-1/2 pt-8 md:pt-14.5 xl:pt-10 relative">
                 <Swiper
                 ref={swiperRef}
                 onSlideChange={(swiper) => setCurrentSlideIndex(swiper.activeIndex)}
                 allowTouchMove={false}
+                className={clsx(
+                    isLoading ? "opacity-0" : "opacity-100"
+                )}
                 >
                     {slides.map((slide, index) =>
                         <SwiperSlide 
@@ -259,6 +302,11 @@ export default function ContactSlider() {
                         )}
                     />
                 </div>
+                {isLoading && 
+                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-30 overflow-hidden">
+                    <CircleLoader isNotInverted/>
+                </div>
+                }
             </form>
         </section>
     )
