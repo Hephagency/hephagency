@@ -17,7 +17,7 @@ export default function Loading(){
         <ProjectsLayoutWrapper
         title={translations.loading[hephagency_config.language]}
         >
-            <div className="xl:min-h-215 grow basis-0 flex justify-start xl:justify-center items-center xl:max-w-2/3">
+            <div className="min-h-150 xl:min-h-215 grow basis-0 flex justify-start xl:justify-center items-center xl:max-w-2/3">
                 <CircleLoader />
             </div>
         </ProjectsLayoutWrapper>

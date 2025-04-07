@@ -26,7 +26,7 @@ export default function ContactSliderProgress({currentSlide, totalSlides, classN
             }}
             >
                 <div className="w-[3px] h-[3px] bg-orange-600 absolute right-0 top-0 absolute"/>
-                <div className="absolute left-full top-1/2 -translate-y-1/2 -translate--[3px] w-30">
+                <div className="absolute left-full top-1/2 -translate-y-1/2 -translate--[3px] w-20 md:w-30">
                     <HephagencyParticles/>
                 </div>
             </div>

@@ -15,7 +15,6 @@ export default function HomeLandingVideo(){
     useGSAP(()=>{
         if(videoRef.current && videoRef.current.parentElement){
             const rect = videoRef.current.getBoundingClientRect();
-            console.log(rect);
             const scale = (window.screen.width < window.screen.height) ? window.screen.height / rect.height : window.screen.width / rect.width;
             const delay = hephagency_config.loaderDuration + 1; 
             const duration = 0.5;
@@ -41,6 +40,7 @@ export default function HomeLandingVideo(){
         muted
         loop
         className="max-w-75 origin-bottom md:max-w-160 h-auto w-full xl:max-w-168.5"
+        playsInline={true}
         />
     )
 }

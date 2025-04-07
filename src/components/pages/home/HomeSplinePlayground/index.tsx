@@ -7,10 +7,14 @@ import HomeSplinePlaygroundCircle from "./HomeSplinePlaygroundCircle";
 import HomeSplineScene from "./HomeSplineScene";
 import translations from "@/libs/translations/translations";
 import hephagency_config from "@/libs/hephagency_config";
+import clsx from "clsx";
 
 export default function HomeSplinePlayground(){
     return (
-        <section className="overflow-hidden w-dvw h-dvh flex flex-col justify-center items-center bg-white">
+        <section className={clsx(
+            "overflow-hidden w-dvw h-dvh flex flex-col justify-center items-center bg-white",
+            hephagency_config.negativeAdditionClassName
+        )}>
             <div className="relative max-w-full flex justify-center items-center max-h-full">
                 <HomeSplinePlaygroundCircle className="min-w-150 xl:min-w-345 h-auto"/>
                 <HomeSplineScene/>

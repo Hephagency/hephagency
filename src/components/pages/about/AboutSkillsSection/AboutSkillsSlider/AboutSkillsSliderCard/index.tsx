@@ -9,7 +9,7 @@ export interface AboutSkillsSliderCardProps {
 export default function AboutSkillsSliderCard({ image }: AboutSkillsSliderCardProps) {
     return (
         <div
-        className="w-full aspect-3/5 xl:aspect-32/47"
+        className="w-full aspect-4/6 xl:aspect-32/47"
         style={
             {
                 backgroundImage: `url(${image})`,

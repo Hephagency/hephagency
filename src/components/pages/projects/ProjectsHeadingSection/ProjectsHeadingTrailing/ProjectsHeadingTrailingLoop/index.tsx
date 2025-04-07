@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(MotionPathPlugin);
 /**
@@ -18,18 +18,22 @@ interface ProjectsHeadingTrailingLoopProps {
 export default function ProjectsHeadingTrailingLoop({ items }: ProjectsHeadingTrailingLoopProps) {
     const imagesContainer = useRef<HTMLDivElement>(null);
     const svgRef = useRef<SVGSVGElement>(null);
+    const [previousContainerWidth, setPreviousContainerWidth] = useState<number>(0);
 
-    useEffect(() => {
-        const resizeObserver = new ResizeObserver(() => {
-            animateImages();
-        });
-        if (imagesContainer.current) {
-            resizeObserver.observe(imagesContainer.current);
+    function handleResize(){
+        if(imagesContainer.current){
+            if(previousContainerWidth !== imagesContainer.current.clientWidth){
+                setPreviousContainerWidth(imagesContainer.current.clientWidth);
+                animateImages();
+            }
         }
+    }
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
         return () => {
-            resizeObserver.disconnect();
+            window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [previousContainerWidth]);
 
     const animateImages = () => {
         if (imagesContainer.current && svgRef.current) {

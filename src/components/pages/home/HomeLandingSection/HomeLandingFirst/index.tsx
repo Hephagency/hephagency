@@ -10,7 +10,7 @@ import HomeLandingVideo from "./HomeLandingVideo";
 export default function HomeLandingFirst(){
     return (
         <section className={clsx(
-            "w-dvw h-dvh bg-red-500 px-4 md:px-6 xl:px-7.5 text-grey-dark py-32 xl:flex xl:flex-col xl:justify-center xl:items-center overflow-hidden",
+            "w-dvw h-dvh bg-red-500 px-4 md:px-6 xl:px-7.5 text-grey-dark py-20 xl:flex xl:flex-col xl:justify-center xl:items-center overflow-hidden",
             hephagency_config.negativeRemovalClassName
         )}>
             <div className="h-full flex flex-col-reverse xl:flex-col xl:justify-center xl:items-center relative xl:w-fit xl:h-fit xl:py-32">

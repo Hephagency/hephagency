@@ -23,10 +23,10 @@ export default function ProjectsSliderCard({ project, className }: ProjectsSlide
                 <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className="w-full aspect-3/4 md:aspect-36/38 object-cover xl:aspect-44/57 transition-all group-hover:scale-110 duration-500"
+                    className="w-full aspect-3/4 md:aspect-36/38 object-cover xl:aspect-44/57 transition-all group-hover:scale-110 group-active:scale-110 duration-500"
                 />
             </div>
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5 transition-all group-hover:opacity-50 group-active:opacity-50 duration-500">
                 <span className="paragraph-small">
                     {project.categories.map(category => category.label).join(" - ")}
                 </span>
@@ -35,7 +35,7 @@ export default function ProjectsSliderCard({ project, className }: ProjectsSlide
                 </h3>
             </div>
             <p 
-            className="paragraph-small"
+            className="paragraph-small transition-all group-hover:opacity-50 group-active:opacity-50 duration-500"
             dangerouslySetInnerHTML={
                 {
                     __html: project.excerpt

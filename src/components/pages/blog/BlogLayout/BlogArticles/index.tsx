@@ -30,7 +30,7 @@ export default function BlogArticles({ articles }: BlogArticlesProps) {
                 )}>
                     <LoaderLink
                         href={`/blog/article/${article.slug}`}
-                        className="paragraph-p flex w-full justify-between gap-4 py-3 md:gap-12.5 md:py-0"
+                        className="paragraph-p flex w-full justify-between gap-4 py-3 md:gap-12.5 md:py-0 transition-all hover:opacity-50 active:opacity-25"
                     >
                         <span className="flex gap-4 grow basis-0 justify-between items-center md:grow-6 xl:grow-8">
                             <span>

@@ -20,7 +20,8 @@ export default function HephagencyButton({icon, children, className, onClick, bu
             }
         }} className={clsx(
             buttonClassName,
-            "cursor-pointer"
+            "cursor-pointer",
+            !isActive && "active:invert active:[&_.button-layout-background]:opacity-100 transition-all duration-300"
         )}>
             <HephagencyButtonLayout icon={icon} className={className} isActive={isActive}>
                 {children}

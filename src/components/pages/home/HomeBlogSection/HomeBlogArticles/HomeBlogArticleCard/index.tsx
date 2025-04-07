@@ -47,11 +47,11 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
                     src={randomImage}
                     alt={article.title}
                     aria-hidden="true"
-                    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 z-10"
                 />
                 }
             </div>
-            <div>
+            <div className="transition-all group-hover:opacity-50 group-active:opacity-25 duration-300">
                 <h3 className="h5">
                     {article.title}
                 </h3>

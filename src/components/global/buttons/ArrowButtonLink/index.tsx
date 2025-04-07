@@ -4,6 +4,7 @@
 
 import Link from "next/link";
 import ArrowButtonLayout, { ArrowButtonLayoutProps } from "../ArrowButtonLayout";
+import clsx from "clsx";
 
 interface ArrowButtonLinkProps extends ArrowButtonLayoutProps{
     href: string;
@@ -15,7 +16,10 @@ export default function ArrowButtonLink({side, className, href, linkClassName, s
     return (
         <Link
             href={href}
-            className={linkClassName}
+            className={clsx(
+                linkClassName,
+                "active:invert transition-all duration-300"
+            )}
             scroll={scroll}
         >
            <ArrowButtonLayout side={side} className={className} />

@@ -48,11 +48,10 @@ export default function HomeProjectsSliders({ projects }: HomeProjectsSlidersPro
     return (
         <div
             className="overflow-hidden flex gap-6"
-            key={isMobile ? "mobile" : isTablet ? "tablet" : "desktop"}
         >
             {groupedProjects.map((projectsRow, index) => (
                 <HomeProjectsSlider
-                    key={index}
+                    key={index + groupedProjects.length}
                     projects={projectsRow}
                     reverse={index % 2 === 1}
                     horizontal={isMobile}

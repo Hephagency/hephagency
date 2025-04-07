@@ -43,11 +43,25 @@ export default function HephagencyMenu({projects} : HephagencyMenuProps){
             if(header){
                 const headerHeight = header.getBoundingClientRect().height/2;
                 const negativeRemovalsElements = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
-                const inWindow = Array.from(negativeRemovalsElements).some((element) => {
+                const negativeAdditionsElements = document.querySelectorAll(`.${hephagency_config.negativeAdditionClassName}`);
+                const elements = [...negativeRemovalsElements, ...negativeAdditionsElements];
+                let inWindow = isNegative;
+                let find = false;
+                Array.from(elements).forEach((element) => {
                     const rect = element.getBoundingClientRect();
-                    return rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > headerHeight;
+                    if(rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > headerHeight && (rect.left - headerHeight) <= 0){
+                        if(element.classList.contains(hephagency_config.negativeRemovalClassName)){
+                            inWindow = false;
+                        } else {
+                            inWindow = true;
+                        }
+                        find = true;
+                    }
                 });
-                setIsNegative(!inWindow);
+                if(!find){
+                    inWindow = true;
+                }
+                setIsNegative(inWindow);
             }
         }
     }
@@ -69,13 +83,15 @@ export default function HephagencyMenu({projects} : HephagencyMenuProps){
         handleScroll();
     },[pathname]);
 
-    useLenis(handleScroll);
+    useLenis(handleScroll,[isNegative]);
 
     useEffect(()=>{
         const negativeRemovalClassNames = document.querySelectorAll(`.${hephagency_config.negativeRemovalClassName}`);
+        const negativeAdditionClassNames = document.querySelectorAll(`.${hephagency_config.negativeAdditionClassName}`);
+        const observerElements = [...negativeRemovalClassNames, ...negativeAdditionClassNames];
         // Listen the class change on the negative removal elements
         // If the class is removed or added, we need to call the handleScroll function
-        negativeRemovalClassNames.forEach((element) => {
+        observerElements.forEach((element) => {
             const observer = new MutationObserver(handleScroll);
             observer.observe(element, {
                 attributes: true,
@@ -84,7 +100,7 @@ export default function HephagencyMenu({projects} : HephagencyMenuProps){
         });
         // Cleanup the observer when the component is unmounted
         return () => {
-            negativeRemovalClassNames.forEach((element) => {
+            observerElements.forEach((element) => {
                 const observer = new MutationObserver(handleScroll);
                 observer.disconnect();
             });
@@ -105,16 +121,17 @@ export default function HephagencyMenu({projects} : HephagencyMenuProps){
             {menuOpen ? translations.close_menu[hephagency_config.language] : translations.menu[hephagency_config.language]}
         </HephagencyButton>
         <div ref={menuRef} className={clsx(
-            "absolute top-0 left-0 w-full h-dvh bg-orange-500 transition-transform duration-500 origin-[1rem_1.25rem] md:origin-[1.825rem_1.25rem] px-4 md:px-6 xl:px-7.5 pb-8 flex flex-col justify-end -z-10",
+            "absolute top-0 left-0 w-full h-dvh bg-orange-500 transition-transform duration-500 origin-[1rem_1.25rem] md:origin-[1.825rem_1.25rem] px-4 md:px-6 xl:px-7.5 pb-8 flex flex-col pt-16 justify-end -z-10",
             menuOpen ? "scale-100" : "scale-0"
         )}>
-            <ul className="absolute top-1/4 right-4 grid grid-cols-2 md:right-6 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">
-                <MenuLinks
-                parentElement="li" 
-                linkClassName="paragraph-large underline underline-offset-6 transition-all hover:opacity-50"
-                hideLoader={true}
-                />
-            </ul>
+            <div className="grow basis-0 flex flex-col justify-center items-end">
+                <ul className="grid grid-cols-2 md:absolute md:top-1/4 md:right-6 gap-y-4.5 gap-x-10 md:gap-x-32 xl:-translate-y-3/4 xl:-translate-x-full">
+                    <MenuLinks
+                    parentElement="li" 
+                    linkClassName="paragraph-large underline underline-offset-6 transition-all hover:opacity-50 active:opacity-25"
+                    />
+                </ul>
+            </div>
             <div>
                 <h2 className="h6 mb-3 md:h5">
                     {translations.last_projects[hephagency_config.language]}

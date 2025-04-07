@@ -19,7 +19,7 @@ export default function CircleLoader({isNotInverted = false}: CircleLoaderProps)
     useGSAP(() => {
         if (containerRef.current) {
             gsap.to(containerRef.current, {
-                scale: 1.1,
+                scale: 0.95,
                 duration: 0.5,
                 ease: "power2.inOut",
                 repeat: -1,
@@ -30,7 +30,7 @@ export default function CircleLoader({isNotInverted = false}: CircleLoaderProps)
     return (
         <div ref={containerRef} 
         className={clsx(
-            "w-full max-w-96 max-h-66 overflow-hidden flex flex-col justify-center items-center",
+            "w-full max-w-96 max-h-64 overflow-hidden flex flex-col justify-center items-center scale-85",
             !isNotInverted && "invert"
         )}>
             <div className="w-full aspect-square">

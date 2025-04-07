@@ -21,7 +21,7 @@ export default function HephagencySmallButton({icon, children, className, onClic
             }
         }} className={clsx(
             buttonClassName,
-            "cursor-pointer"
+            "cursor-pointer active:invert active:[&_.button-layout-background]:opacity-100 transition-all duration-300"
         )}>
             <HephagencySmallButtonLayout icon={icon} className={className} isActive={isActive}>
                 {children}

@@ -13,6 +13,7 @@ interface LoaderLinkProps extends LinkProps{
     children: ReactNode
     className?: string;
     hideLoader?: boolean;
+    target?: string;
 }
 
 export default function LoaderLink({hideLoader,...props} : LoaderLinkProps){
@@ -47,6 +48,7 @@ export default function LoaderLink({hideLoader,...props} : LoaderLinkProps){
         className={props.className}
         onClick={!hideLoader ? handleClick : undefined}
         {...props}
+        target={props.target}
         >
             {props.children}
         </Link>

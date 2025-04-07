@@ -49,6 +49,7 @@ export default function WorkHeadingSection({ project }: WorkHeadingSectionProps)
                                 href={project.url}
                                 linkClassName="w-fit"
                                 hideLoader={true}
+                                target="_blank"
                             >
                                 {translations.work_see_project[hephagency_config.language]}
                             </HephagencyButtonLink>}

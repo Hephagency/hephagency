@@ -11,6 +11,7 @@ export default function HomeAboutMatchCut() {
                 muted
                 loop
                 className="w-full aspect-5/7 md:aspect-auto md:h-131 xl:h-160 object-cover md:sticky md:top-1/6"
+                playsInline={true}
             >
                 Your browser does not support the video tag.
             </video>

@@ -2,6 +2,7 @@
  * A Component to display a button with an arrow
  */
 
+import clsx from "clsx";
 import ArrowButtonLayout, { ArrowButtonLayoutProps } from "../ArrowButtonLayout";
 
 interface ArrowButtonProps extends ArrowButtonLayoutProps{
@@ -16,7 +17,10 @@ export default function ArrowButton({side, className, onClick, buttonClassName}:
             if(onClick){
                 onClick();
             }
-        }} className={buttonClassName}>
+        }} className={clsx(
+            buttonClassName,
+            "active:invert transition-all duration-300"
+        )}>
             <ArrowButtonLayout side={side} className={className} />
         </button>
     )

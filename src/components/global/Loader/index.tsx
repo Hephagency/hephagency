@@ -82,8 +82,9 @@ export default function Loader(){
             setPreviousPathname(pathname);
             return ()=>clearTimeout(timeout);
         } else if(previousPathname !== pathname){
-            hideLoader();
+            const timeout = setTimeout(hideLoader,250);
             setPreviousPathname(pathname);
+            return ()=>clearTimeout(timeout);
         }
     },[pathname]);
 

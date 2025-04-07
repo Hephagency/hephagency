@@ -15,7 +15,7 @@ export default function ArrowButtonLayout({ side, className }: ArrowButtonLayout
 }) {
     return (
         <div
-            className="relative bg-current w-fit p-1.5 border-solid transition-all hover:invert cursor-pointer appearance-none"
+            className="relative bg-current w-fit p-1.5 border-solid transition-all hover:invert cursor-pointer appearance-none duration-300"
         >
             <div className="absolute pointer-events-none w-full h-full border-current border top-0 left-0 invert"/>
             <BackArrowIcon className={clsx(

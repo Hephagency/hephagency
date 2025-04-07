@@ -92,7 +92,7 @@ export default function ContactSlider() {
             title: translations.contact_intro_title[hephagency_config.language],
             children:
                 <div className="flex flex-col gap-7 md:gap-10">
-                    <p className="paragraph-large md:max-w-139">
+                    <p className="paragraph-p md:paragraph-large md:max-w-139">
                         {translations.contact_intro_text[hephagency_config.language]}
                     </p>
                     <HephagencyButton

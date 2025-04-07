@@ -180,7 +180,6 @@ export default class WPUtils {
             try {
                 const response = await fetch(`${this.baseUrl}/${this.projectsPostType}?slug=${slug}`);
                 const data = await response.json();
-                console.log(data);
                 if(data.length > 0){
                     const wpProject = data[0];
                     resolve({
