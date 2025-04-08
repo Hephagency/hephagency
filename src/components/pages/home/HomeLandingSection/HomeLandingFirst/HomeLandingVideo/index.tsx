@@ -39,7 +39,7 @@ export default function HomeLandingVideo(){
         autoPlay
         muted
         loop
-        className="max-w-75 origin-bottom md:max-w-160 h-auto w-full xl:max-w-168.5"
+        className="max-w-75 origin-bottom md:max-w-160 h-auto w-full xl:w-130 2xl:max-w-168.5 "
         playsInline={true}
         />
     )

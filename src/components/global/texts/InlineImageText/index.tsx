@@ -4,6 +4,7 @@
 
 import clsx from "clsx";
 import HephagencyIcon from "../../icons/HephagencyIcon";
+import Image from "next/image";
 
 interface InlineImageTextProps {
     image: string; // URL of the image
@@ -43,13 +44,15 @@ export default function InlineImageText({ image, firstWord, text, className, ele
                     {splitText(firstWord)}
                 </span>
                 &nbsp;
-                <img
-                    className={clsx(
-                        "inline-block align-baseline",
-                        elementClassName
-                    )}
-                    src={image}
-                    aria-hidden="true"
+                <Image
+                src={image}
+                alt={image}
+                width={75}
+                height={38}
+                className={clsx(
+                    "inline-block align-baseline",
+                    elementClassName
+                )}
                 />
                 &nbsp;
                 {splitText(text)}

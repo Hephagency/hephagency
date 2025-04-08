@@ -49,7 +49,7 @@ export default function HephagencyMenu({projects} : HephagencyMenuProps){
                 let find = false;
                 Array.from(elements).forEach((element) => {
                     const rect = element.getBoundingClientRect();
-                    if(rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > headerHeight && (rect.left - headerHeight) <= 0){
+                    if(rect.top <= headerHeight && rect.bottom >= headerHeight && rect.right > window.screen.availWidth/2 && (rect.left - window.screen.availWidth/2) <= 0){
                         if(element.classList.contains(hephagency_config.negativeRemovalClassName)){
                             inWindow = false;
                         } else {

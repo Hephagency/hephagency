@@ -22,43 +22,43 @@
         }
     },
     "about_grid_first_word":{
-        "fr":"Travailler",
-        "en":"Work"
+        "fr":"Nous forgeons",
+        "en":"We forge"
     },
     "about_grid_heading_text":{
-        "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-        "en": "with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+        "fr":"chaque projet avec un design soigné, une méthode claire et une équipe engagée. Notre approche repose sur l’exigence, la transparence et la passion à chaque étape du processus.",
+        "en": "Each project with a well-designed, clear method and an engaged team. Our approach is based on demand, transparency and passion at each stage of the process."
     },
     "about_grid_parts":{
         "fr":[
             {
                 "title":"Le design forge votre croissance",
                 "texts":[
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    "Un processus clair et affûté, pensé pour durer de la première étincelle à la dernière retouche, nous avançons avec transparence.",
+                    "Nous façonnons des identités robustes, forgées avec méthode et portées par un sens fort du détail."
                 ]
             },
             {
                 "title":"Système de paiement et suivi du projet transparent",
                 "texts":[
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    "Nous avons mis en place un système de paiement structuré, simple et progressif. Chaque phase du projet est associée à des livrables clairs, permettant un équilibre juste entre engagement et sérénité. Rien n’est laissé au hasard, tout est forgé avec rigueur.",
+                    "Tout au long de la collaboration, nous assurons un suivi transparent, précis et réactif. Vous savez où en est le projet à chaque étape, comme dans un atelier où l’on voit la pièce prendre forme jour après jour."
                 ]
             },
             {
-                "title":"Système de paiement et suivis du projet transparent",
+                "title":"Une équipe designers et développeurs passionnés",
                 "texts":[
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                    "Travailler avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                    "Derrière chaque projet se trouvent des esprits affûtés et des mains passionnées. Designers, développeurs, notre équipe est une alliance de talents forgés par l’expérience, animés par l’envie de créer du sens, du beau et du fonctionnel.",
+                    "Chaque membre de l’équipe est un artisan du numérique. Ensemble, nous avançons comme une forge soudée où chacun apporte son savoir-faire, son regard et sa précision pour façonner des projets sur-mesure, solides et durables."
                 ]
             }
         ],
         "en":[
-            [
+            [   
                 {
                     "title": "Design drives your growth",
                     "texts": [
-                        "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
+                        "A clear and honed process, designed to last from the first spark to the last touch, we move forward with transparency.",
                         "Work with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
                     ]
                 },
@@ -90,7 +90,7 @@
                 "en": "Value 1"
             },
             "illustration": "https://picsum.photos/600/600?random=1",
-            "text_image": "https://picsum.photos/75/35?random=1",
+            "text_image": "/images/gradients/tiny/1.png",
             "first_word": {
                 "fr": "Travailler",
                 "en": "Work"
@@ -106,7 +106,7 @@
                 "en": "Value 2"
             },
             "illustration": "https://picsum.photos/600/600?random=2",
-            "text_image": "https://picsum.photos/75/35?random=2",
+            "text_image": "/images/gradients/tiny/1.png",
             "first_word": {
                 "fr": "Travailler",
                 "en": "Work"
@@ -122,7 +122,7 @@
                 "en": "Value 3"
             },
             "illustration": "https://picsum.photos/600/600?random=3",
-            "text_image": "https://picsum.photos/75/35?random=3",
+            "text_image": "/images/gradients/tiny/1.png",
             "first_word": {
                 "fr": "Travailler",
                 "en": "Work"
@@ -138,7 +138,7 @@
                 "en": "Value 4"
             },
             "illustration": "https://picsum.photos/600/600?random=4",
-            "text_image": "https://picsum.photos/75/35?random=4",
+            "text_image": "/images/gradients/tiny/1.png",
             "first_word": {
                 "fr": "Travailler",
                 "en": "Work"
@@ -154,8 +154,8 @@
         "en":"Our talents"
     },
     "about_skills_heading_paragraph":{
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Nous croyons en un design construit avec les bonnes matières, l'écoute, l’accessibilité, l’exellence. Nous ne vendons pas du rêve, nous livrons des outils solides.",
+        "en":"We believe in a design built with the right materials, listening, accessibility, excellence. We don't sell dreams, we deliver solid tools."
     },
     "about_skills":{
         "fr":[
@@ -212,8 +212,8 @@
         ]
     },
     "about_team_heading_paragraph":{
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Nos projets sont le fruit d’une étroite collaboration entre passionnés. Chaque client est un maillon précieux dans notre processus créatif.",
+        "en":"Our projects are the result of a close collaboration between passionate people. Each client is a precious link in our creative process."
     },
     "about_team_title":{
         "fr":"Notre équipe",

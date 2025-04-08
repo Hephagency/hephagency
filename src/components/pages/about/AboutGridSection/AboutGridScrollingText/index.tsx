@@ -87,7 +87,7 @@ export default function AboutGridScrollingText() {
                     <InlineImageText
                     text={translations.about_grid_heading_text[hephagency_config.language]}
                     firstWord={translations.about_grid_first_word[hephagency_config.language]}
-                    image="https://picsum.photos/75/35?random=1"
+                    image="/images/gradients/tiny/1.png"
                     elementClassName={clsx(
                         hiddenCharClassName,
                         "opacity-50"

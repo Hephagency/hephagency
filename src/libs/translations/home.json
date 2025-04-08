@@ -4,20 +4,20 @@
         "en":"Forge your web presence"
     },
     "home_about_intro": {
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Nous façonnons votre image digitale avec rigueur et passion. Artisanat du web, excellence du détail, chaque projet est affûté sur mesure.",
+        "en":"We shape your digital image with rigor and passion. Web craftsmanship, excellence in detail, each project is honed to order."
     },
     "home_about_vision_title": {
         "fr":"Notre vision",
         "en":"Our vision"
     },
     "home_about_vision_text": {
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Chaque pixel est forgé avec soin. Nous sculptons des expériences uniques, adaptatives et élégantes. Un travail d’orfèvre numérique où l’esthétique rencontre la performance.",
+        "en":"Each pixel is forged with care. We sculpt unique, adaptive, and elegant experiences. A digital craftsmanship where aesthetics meet performance."
     },
     "home_projects":{
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Chaque projet est une pièce unique, forgée avec précision et pensée pour allier esthétique, impact et performance.",
+        "en":"Each project is a unique piece, forged with precision and thought to combine aesthetics, impact and performance."
     },
     "home_projects_cta":{
         "fr": "Voir notre travail",
@@ -28,15 +28,15 @@
         "en":"Our Blog"
     },
     "home_blog_intro": {
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "fr":"Bienvenue dans notre blog d’atelier, un espace où l’on partage nos réflexions, nos méthodes, et la chaleur du feu créatif qui façonne chacun de nos projets.",
+        "en":"Welcome to our workshop blog, a space where we share our reflections, methods, and the warmth of the creative fire that shapes each of our projects."
     },
     "home_landing_title_first":{
         "fr":"Votre idée",
         "en":"Your idea"
     },
     "home_landing_title_second":{
-        "fr":"Notre créativité",
-        "en":"Our creativity"
+        "fr":"Notre projet",
+        "en":"Our project"
     }
 }
