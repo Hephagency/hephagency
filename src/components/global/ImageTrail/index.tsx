@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, JSX } from "react";
 import { gsap } from "gsap";
 
 function lerp(a: number, b: number, n: number): number {

@@ -18,7 +18,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-01-02T12:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=1",
         title: "Project One",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         slug: "project-one",
@@ -98,7 +97,11 @@ const sampleProjects : ProjectInterface[] = [
                     "We maintain open communication channels with clients throughout the project lifecycle, incorporating feedback and making iterative improvements to exceed expectations."
                 ]
             }
-        ]
+        ],
+        metadata: {
+            title: "Project One",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 2,
@@ -106,7 +109,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-02-03T13:00:00Z",
         thumbnail: "https://picsum.photos/1280/900?random=2",
         title: "Project Two",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         slug: "project-two",
@@ -129,7 +131,11 @@ const sampleProjects : ProjectInterface[] = [
                 title: "Project Highlights",
                 images: []
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Two",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 3,
@@ -137,7 +143,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-03-04T14:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=3",
         title: "Project Three",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         slug: "project-three",
@@ -176,7 +181,11 @@ const sampleProjects : ProjectInterface[] = [
                 }],
                 texts: ["The final product in action"]
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Three",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 4,
@@ -184,7 +193,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-04-02T10:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=4",
         title: "Project Four",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         slug: "project-four",
@@ -207,7 +215,11 @@ const sampleProjects : ProjectInterface[] = [
                 texts: ["Planning", "Development", "Launch"],
                 mirror: true
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Four",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 5,
@@ -215,7 +227,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-05-03T11:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=5",
         title: "Project Five",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         slug: "project-five",
@@ -246,7 +257,11 @@ const sampleProjects : ProjectInterface[] = [
                 texts: ["Before", "After"],
                 mirror: true
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Five",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 6,
@@ -254,7 +269,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-06-04T12:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=6",
         title: "Project Six",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
         slug: "project-six",
@@ -277,7 +291,11 @@ const sampleProjects : ProjectInterface[] = [
                 texts: ["Strategy", "Execution", "Results"],
                 mirror: true
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Six",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 7,
@@ -285,7 +303,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-07-02T09:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=7",
         title: "Project Seven",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         slug: "project-seven",
@@ -320,7 +337,11 @@ const sampleProjects : ProjectInterface[] = [
                 }],
                 texts: ["Final Implementation"]
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Seven",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 8,
@@ -328,7 +349,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-08-03T08:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=8",
         title: "Project Eight",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
         slug: "project-eight",
@@ -351,7 +371,11 @@ const sampleProjects : ProjectInterface[] = [
                 texts: ["Planning", "Development", "Results"],
                 mirror: true
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Eight",
+            description: "A comprehensive project overview"
+        }
     },
     {
         id: 9,
@@ -359,7 +383,6 @@ const sampleProjects : ProjectInterface[] = [
         updated_at: "2023-09-04T07:00:00Z",
         thumbnail: "https://picsum.photos/1280/720?random=9",
         title: "Project Nine",
-        language: "fr",
         categories: getRandomCategories(),
         excerpt: "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
         slug: "project-nine",
@@ -394,7 +417,11 @@ const sampleProjects : ProjectInterface[] = [
                 texts: ["Phase 1", "Phase 2", "Phase 3"],
                 mirror: true
             }
-        ]
+        ],
+        metadata: {
+            title: "Project Nine",
+            description: "A comprehensive project overview"
+        }
     }
 ];
 

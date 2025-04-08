@@ -1,6 +1,5 @@
 import ArticleInterface from "../interfaces/ArticleInterface";
 import sampleCategories from "./sampleCategories";
-import LanguageType from "../types/LanguageType";
 
 /**
  * This function returns between 1 and 2 random categories from the sampleCategories array.
@@ -23,13 +22,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-one",
         categories: getRandomCategories(),
         author: "John Doe",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article One - A Comprehensive Guide",
+            description: "An in-depth look at the first article in our series"
+        },
         sections: [
             {
                 title: "Introduction",
                 content: {
                     text: "This is the first section of Article One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/600?random=1",
@@ -42,7 +45,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Main Content",
                 content: {
                     text: "This is the second section of Article One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/900/500?random=2",
@@ -55,7 +59,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Image Only Section",
                 content: {
                     text: "",
-                    grow: 0
+                    grow: 0,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1200/800?random=3",
@@ -68,7 +73,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Text Only Section",
                 content: {
                     text: "This section has only text content without an image. It demonstrates how the layout handles text-only sections.",
-                    grow: 2
+                    grow: 2,
+                    fontSize: 20
                 },
                 image: {
                     src: "",
@@ -81,7 +87,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Balanced Section",
                 content: {
                     text: "This section has balanced grow values for both text and image.",
-                    grow: 1.5
+                    grow: 1.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1000/700?random=5",
@@ -102,13 +109,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-two",
         categories: getRandomCategories(),
         author: "Jane Smith",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Two - Exploring New Horizons",
+            description: "A journey through the second article in our series"
+        },
         sections: [
             {
                 title: "Overview",
                 content: {
                     text: "This is the first section of Article Two.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/700/800?random=3",
@@ -120,7 +131,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Two.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1000/400?random=4",
@@ -133,7 +145,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Text-Heavy Section",
                 content: {
                     text: "This section has more text content with a higher grow value for text. It demonstrates how the layout handles sections with more emphasis on text content. The text can be quite lengthy to show how the layout adapts to longer content.",
-                    grow: 2.5
+                    grow: 2.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/600?random=7",
@@ -146,7 +159,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Image-Heavy Section",
                 content: {
                     text: "This section has more emphasis on the image.",
-                    grow: 0.5
+                    grow: 0.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1400/900?random=8",
@@ -159,7 +173,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "No Image Section",
                 content: {
                     text: "This section has no image, demonstrating how the layout handles text-only content with a higher grow value.",
-                    grow: 3
+                    grow: 3,
+                    fontSize: 20
                 },
                 image: {
                     src: "",
@@ -179,14 +194,18 @@ const sampleArticles: ArticleInterface[] = [
         title: "Article Three",
         excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
         slug: "article-three",
-        language: "fr" as LanguageType,
         categories: getRandomCategories(),
+        metadata: {
+            title: "Article Three - Deep Dive Analysis",
+            description: "An analytical perspective on our third article"
+        },
         sections: [
             {
                 title: "Background",
                 content: {
                     text: "This is the first section of Article Three.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/600/900?random=5",
@@ -199,7 +218,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Analysis",
                 content: {
                     text: "This is the second section of Article Three.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1100/500?random=6",
@@ -212,7 +232,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Full-Width Image",
                 content: {
                     text: "",
-                    grow: 0
+                    grow: 0,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1600/900?random=9",
@@ -225,7 +246,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Text-Only Analysis",
                 content: {
                     text: "This section contains only text content with a higher grow value. It demonstrates how the layout handles text-only sections with emphasis on the content. The text can be quite lengthy to show how the layout adapts to longer content.",
-                    grow: 3
+                    grow: 3,
+                    fontSize: 20
                 },
                 image: {
                     src: "",
@@ -238,7 +260,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Balanced Conclusion",
                 content: {
                     text: "This is the conclusion section with balanced grow values.",
-                    grow: 1.5
+                    grow: 1.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1000/700?random=11",
@@ -259,13 +282,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-four",
         categories: getRandomCategories(),
         author: "Michael Brown",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Four - Comprehensive Review",
+            description: "A detailed review of our fourth article"
+        },
         sections: [
             {
                 title: "Key Points",
                 content: {
                     text: "This is the first section of Article Four.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/750/750?random=7",
@@ -277,7 +304,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Four.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1200/400?random=8",
@@ -290,7 +318,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Image Gallery",
                 content: {
                     text: "",
-                    grow: 0
+                    grow: 0,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1800/1200?random=13",
@@ -303,7 +332,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Detailed Analysis",
                 content: {
                     text: "This section contains a detailed analysis with more emphasis on the text content. It demonstrates how the layout handles sections with more text and less emphasis on images.",
-                    grow: 2.5
+                    grow: 2.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/600?random=14",
@@ -316,7 +346,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Conclusion",
                 content: {
                     text: "This is the conclusion section with no image.",
-                    grow: 3
+                    grow: 3,
+                    fontSize: 20
                 },
                 image: {
                     src: "",
@@ -337,13 +368,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-five",
         categories: getRandomCategories(),
         author: "Emily Davis",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Five - Advanced Topics",
+            description: "Exploring advanced concepts in our fifth article"
+        },
         sections: [
             {
                 title: "Executive Summary",
                 content: {
                     text: "This is the first section of Article Five.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/850/650?random=9",
@@ -356,7 +391,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Conclusion",
                 content: {
                     text: "This is the second section of Article Five.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/950/550?random=10",
@@ -369,7 +405,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Visual Data",
                 content: {
                     text: "",
-                    grow: 0
+                    grow: 0,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2000/1000?random=15",
@@ -382,7 +419,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Text-Only Section",
                 content: {
                     text: "This section contains only text content. It demonstrates how the layout handles text-only sections with a higher grow value for the text content.",
-                    grow: 3
+                    grow: 3,
+                    fontSize: 20
                 },
                 image: {
                     src: "",
@@ -395,12 +433,13 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Balanced Section",
                 content: {
                     text: "This section has balanced grow values for both text and image.",
-                    grow: 1.5
+                    grow: 1.5,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1000/700?random=17",
                     alt: "Balanced section image for Article Five",
-                    grow: 1.5
+                    grow: 1.5,
                 },
                 flexDirection: "row-reverse"
             }
@@ -416,13 +455,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-six",
         categories: getRandomCategories(),
         author: "Chris Evans",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Six - Special Edition",
+            description: "A special edition of our sixth article"
+        },
         sections: [
             {
                 title: "Introduction",
                 content: {
                     text: "This is the first section of Article Six.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/650/850?random=11",
@@ -434,7 +477,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Six.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1300/450?random=12",
@@ -455,13 +499,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-seven",
         categories: getRandomCategories(),
         author: "Laura Wilson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Seven - Expert Analysis",
+            description: "An expert analysis in our seventh article"
+        },
         sections: [
             {
                 title: "Overview",
                 content: {
                     text: "This is the first section of Article Seven.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/700/700?random=13",
@@ -474,7 +522,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Future Implications",
                 content: {
                     text: "This is the second section of Article Seven.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1400/500?random=14",
@@ -495,13 +544,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-twenty-one",
         categories: getRandomCategories(),
         author: "Sophia Wilson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Twenty-One - Special Feature",
+            description: "A special feature in our twenty-first article"
+        },
         sections: [
             {
                 title: "Background Information",
                 content: {
                     text: "This is the first section of Article Twenty-One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/800?random=41",
@@ -513,7 +566,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Twenty-One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1500/450?random=42",
@@ -534,13 +588,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-nine",
         categories: getRandomCategories(),
         author: "John Doe",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Nine - In-Depth Review",
+            description: "An in-depth review of our ninth article"
+        },
         sections: [
             {
                 title: "Key Findings",
                 content: {
                     text: "This is the first section of Article Nine.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/750/850?random=43",
@@ -553,7 +611,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Recommendations",
                 content: {
                     text: "This is the second section of Article Nine.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1600/500?random=44",
@@ -574,13 +633,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-ten",
         categories: getRandomCategories(),
         author: "Jane Smith",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Ten - Comprehensive Guide",
+            description: "A comprehensive guide in our tenth article"
+        },
         sections: [
             {
                 title: "Introduction",
                 content: {
                     text: "This is the first section of Article Ten.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/600/900?random=45",
@@ -592,7 +655,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Ten.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1700/450?random=46",
@@ -613,13 +677,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-eleven",
         categories: getRandomCategories(),
         author: "Alice Johnson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Eleven - Expert Analysis",
+            description: "An expert analysis in our eleventh article"
+        },
         sections: [
             {
                 title: "Executive Summary",
                 content: {
                     text: "This is the first section of Article Eleven.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/850/750?random=47",
@@ -632,7 +700,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Conclusion",
                 content: {
                     text: "This is the second section of Article Eleven.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1800/500?random=48",
@@ -653,13 +722,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-twelve",
         categories: getRandomCategories(),
         author: "Michael Brown",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Twelve - Special Edition",
+            description: "A special edition of our twelfth article"
+        },
         sections: [
             {
                 title: "Overview",
                 content: {
                     text: "This is the first section of Article Twelve.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/700/900?random=49",
@@ -671,7 +744,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Twelve.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/1900/450?random=50",
@@ -692,13 +766,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-thirteen",
         categories: getRandomCategories(),
         author: "Emily Davis",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Thirteen - In-Depth Analysis",
+            description: "An in-depth analysis of our thirteenth article"
+        },
         sections: [
             {
                 title: "Background",
                 content: {
                     text: "This is the first section of Article Thirteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/700?random=51",
@@ -711,7 +789,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Analysis",
                 content: {
                     text: "This is the second section of Article Thirteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2000/450?random=52",
@@ -732,13 +811,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-fourteen",
         categories: getRandomCategories(),
         author: "Chris Evans",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Fourteen - Expert Review",
+            description: "An expert review of our fourteenth article"
+        },
         sections: [
             {
                 title: "Key Points",
                 content: {
                     text: "This is the first section of Article Fourteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/750/800?random=53",
@@ -750,7 +833,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Fourteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2100/450?random=54",
@@ -771,13 +855,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-fifteen",
         categories: getRandomCategories(),
         author: "Laura Wilson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Fifteen - Comprehensive Analysis",
+            description: "A comprehensive analysis of our fifteenth article"
+        },
         sections: [
             {
                 title: "Introduction",
                 content: {
                     text: "This is the first section of Article Fifteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/900/650?random=55",
@@ -790,7 +878,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Main Content",
                 content: {
                     text: "This is the second section of Article Fifteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2200/450?random=56",
@@ -811,13 +900,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-sixteen",
         categories: getRandomCategories(),
         author: "Sophia Wilson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Sixteen - Special Feature",
+            description: "A special feature in our sixteenth article"
+        },
         sections: [
             {
                 title: "Overview",
                 content: {
                     text: "This is the first section of Article Sixteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/650/850?random=57",
@@ -829,7 +922,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Sixteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2300/450?random=58",
@@ -850,13 +944,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-seventeen",
         categories: getRandomCategories(),
         author: "John Doe",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Seventeen - Expert Review",
+            description: "An expert review of our seventeenth article"
+        },
         sections: [
             {
                 title: "Background",
                 content: {
                     text: "This is the first section of Article Seventeen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/850/750?random=59",
@@ -869,7 +967,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Analysis",
                 content: {
                     text: "This is the second section of Article Seventeen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2400/450?random=60",
@@ -890,13 +989,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-eighteen",
         categories: getRandomCategories(),
         author: "Jane Smith",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Eighteen - Comprehensive Guide",
+            description: "A comprehensive guide in our eighteenth article"
+        },
         sections: [
             {
                 title: "Key Points",
                 content: {
                     text: "This is the first section of Article Eighteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/700/900?random=61",
@@ -908,7 +1011,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Eighteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2500/450?random=62",
@@ -929,13 +1033,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-nineteen",
         categories: getRandomCategories(),
         author: "Alice Johnson",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Nineteen - Expert Analysis",
+            description: "An expert analysis in our nineteenth article"
+        },
         sections: [
             {
                 title: "Executive Summary",
                 content: {
                     text: "This is the first section of Article Nineteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/800/800?random=63",
@@ -948,7 +1056,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Conclusion",
                 content: {
                     text: "This is the second section of Article Nineteen.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2600/450?random=64",
@@ -969,13 +1078,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-twenty",
         categories: getRandomCategories(),
         author: "Michael Brown",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Twenty - Special Edition",
+            description: "A special edition of our twentieth article"
+        },
         sections: [
             {
                 title: "Introduction",
                 content: {
                     text: "This is the first section of Article Twenty.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/750/850?random=65",
@@ -987,7 +1100,8 @@ const sampleArticles: ArticleInterface[] = [
             {
                 content: {
                     text: "This is the second section of Article Twenty.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2700/450?random=66",
@@ -1008,13 +1122,17 @@ const sampleArticles: ArticleInterface[] = [
         slug: "article-twenty-one",
         categories: getRandomCategories(),
         author: "Emily Davis",
-        language: "fr" as LanguageType,
+        metadata: {
+            title: "Article Twenty-One - In-Depth Review",
+            description: "An in-depth review of our twenty-first article"
+        },
         sections: [
             {
                 title: "Overview",
                 content: {
                     text: "This is the first section of Article Twenty-One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/900/700?random=67",
@@ -1027,7 +1145,8 @@ const sampleArticles: ArticleInterface[] = [
                 title: "Future Implications",
                 content: {
                     text: "This is the second section of Article Twenty-One.",
-                    grow: 1
+                    grow: 1,
+                    fontSize: 20
                 },
                 image: {
                     src: "https://picsum.photos/2800/450?random=68",
