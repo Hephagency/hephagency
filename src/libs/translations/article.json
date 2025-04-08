@@ -1,0 +1,10 @@
+{
+    "article_author":{
+        "fr": "Auteur",
+        "en": "Author"
+    },
+    "article_published_date":{
+        "fr": "Date de publication",
+        "en": "Published date"
+    }
+}

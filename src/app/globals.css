@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html{
+  font-size: 16px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-orange-500: #f57329;
+  --color-orange-400: #fa8b4c;
+  --color-orange-300: #fca778;
+  --color-orange-200: #f3b695;
+  --color-orange-100: #f5cab2;
+  --color-orange-50: #f6d7c6;
+  --color-orange-600: #eb5a07;
+  --color-orange-700: #b34304;
+  --color-orange-800: #702a02;
+  --color-orange-900: #3a1500;
+  --color-red-50: #f7d6d3;
+  --color-red-500: #f5392a;
+  --color-red-100: #f7c6c2;
+  --color-red-200: #f5a39d;
+  --color-red-300: #f5837a;
+  --color-red-400: #f55346;
+  --color-red-600: #dd1707;
+  --color-red-700: #780a01;
+  --color-red-800: #420601;
+  --color-red-900: #280300;
+  --color-grey-light: #f3eeee;
+  --color-grey-100: #ece7e7;
+  --color-grey-200: #c9c2c2;
+  --color-grey-300: #a7a0a0;
+  --color-grey-400: #837c7c;
+  --color-grey-500: #5e5959;
+  --color-grey-600: #4e4545;
+  --color-grey-700: #363434;
+  --color-grey-800: #232222;
+  --color-grey-dark: #0b0a0a;
+  --font-inter: var(--font-inter);
+  --font-league-spartan: var(--font-league-spartan);
+}
+
+@utility paragraph-xx-small {
+  font-family: var(--font-inter);
+  font-size: 0.5rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-x-small {
+  font-family: var(--font-inter);
+  font-size: 0.625rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-smallest {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-small {
+  font-family: var(--font-inter);
+  font-size: 0.875rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-p {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-large {
+  font-family: var(--font-inter);
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: var(--font-weight-light);
+}
+
+@utility paragraph-x-large {
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
+@utility paragraph-xx-large {
+  font-family: var(--font-inter);
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+@utility h0 {
+  font-family: var(--font-league-spartan);
+  font-size: 7.5rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h1 {
+  font-family: var(--font-league-spartan);
+  font-size: 6rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h2 {
+  font-family: var(--font-league-spartan);
+  font-size: 4.75rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h3 {
+  font-family: var(--font-league-spartan);
+  font-size: 3.75rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h4 {
+  font-family: var(--font-league-spartan);
+  font-size: 3.125rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h5 {
+  font-family: var(--font-league-spartan);
+  font-size: 2.5rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+@utility h6 {
+  font-family: var(--font-league-spartan);
+  font-size: 1.875rem;
+  line-height: 120%;
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+}
+
+/*
+Customize the scrollbar
+The background of the scrollbar is transparent
+The thumb inverts the colors
+The thumb is thin
+*/
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange-500);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange-400);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-orange-300);
+}

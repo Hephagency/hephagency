@@ -1,0 +1,38 @@
+{
+    "menu":{
+        "fr":"Menu",
+        "en":"Menu"
+    },
+    "close_menu": {
+        "fr": "Fermer",
+        "en": "Close"
+    },
+    "last_projects":{
+        "fr":"Derniers projets",
+        "en":"Last projects"
+    },
+    "paris":{
+        "fr":"Paris",
+        "en":"Paris"
+    },
+    "hephagency":{
+        "fr":"Hephagency",
+        "en":"Hephagency"
+    },
+    "view_all":{
+        "fr":"Voir tout",
+        "en":"View all"
+    },
+    "work_with_us":{
+        "fr":"Travailler avec nous",
+        "en":"Work with us"
+    },
+    "not_found_error":{
+        "fr":"404",
+        "en":"404"
+    },
+    "loading":{
+        "fr":"Chargement...",
+        "en":"Loading..."
+    }
+}

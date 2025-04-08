@@ -1,0 +1,14 @@
+{
+    "loader_web_development":{
+        "fr":"Développement web",
+        "en":"Web development"
+    },
+    "loader_branding":{
+        "fr":"Branding",
+        "en":"Branding"
+    },
+    "loader_digital_first":{
+        "fr":"Digital first",
+        "en":"Digital first"
+    }
+}

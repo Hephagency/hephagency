@@ -1,0 +1,18 @@
+{
+    "work_see_project": {
+        "fr": "Voir le projet",
+        "en": "See project"
+    },
+    "work_release_date": {
+        "fr": "Date de sortie",
+        "en": "Release date"
+    },
+    "work_customer":{
+        "fr": "Client",
+        "en": "Customer"
+    },
+    "work_same_categories":{
+        "fr": "Catégories similaires",
+        "en": "Same categories"
+    }
+}
