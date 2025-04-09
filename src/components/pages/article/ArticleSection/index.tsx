@@ -57,7 +57,7 @@ export default function ArticleSection({ section }: ArticleSectionProps) {
                     {section.title && <h2 className="paragraph-small text-grey-300">{section.title}</h2>}
                     {section.content.text && 
                     <div 
-                    className="paragraph-p xl:paragraph-large"
+                    className="paragraph-p xl:paragraph-large [&_li]:list-disc [&_li]:ml-4 [&_li]:my-2 [&_li]:pl-2 [&_p]:mb-2 [&_table]:w-full [&_table]:border-collapse [&_table]:border-2 [&_table]:border-grey-300 [&_table]:mb-2 [&_table]:border-r-2 [&_table]:border-grey-300 [&_td]:p-2 [&_td]:border-r-2 [&_td]:border-grey-300 [&_th]:p-2 [&_th]:border-r-2 [&_th]:border-grey-300 [&_th]:border-b-2 [&_th]:border-grey-300 [&_table]:my-4" 
                     style={
                         {
                             fontSize: section.content.fontSize,

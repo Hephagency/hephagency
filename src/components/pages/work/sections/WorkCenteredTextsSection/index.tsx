@@ -39,7 +39,7 @@ export default function WorkCenteredTextsSection({section}: WorkCenteredTextsSec
                                 </h2>
                             )}
                             <div
-                            className="paragraph-p md:paragraph-large xl:paragraph-x-large "
+                            className="paragraph-p md:paragraph-large xl:paragraph-x-large [&_li]:list-disc [&_li]:ml-4 [&_li]:my-2 [&_li]:pl-2 [&_p]:mb-2 [&_table]:w-full [&_table]:border-collapse [&_table]:border-2 [&_table]:border-grey-300 [&_table]:mb-2 [&_table]:border-r-2 [&_table]:border-grey-300 [&_td]:p-2 [&_td]:border-r-2 [&_td]:border-grey-300 [&_th]:p-2 [&_th]:border-r-2 [&_th]:border-grey-300 [&_th]:border-b-2 [&_th]:border-grey-300 [&_table]:my-4"
                             dangerouslySetInnerHTML={{__html: text}}
                             />
                         </div>

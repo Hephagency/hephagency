@@ -36,7 +36,7 @@ export default function HomeBlogArticleCard({ article, className }: HomeBlogArti
             className
         )}
         >
-            <div className="w-full aspect-square relative">
+            <div className="w-full aspect-square overflow-hidden relative">
                 <img
                 src={article.thumbnail}
                 alt={article.title}

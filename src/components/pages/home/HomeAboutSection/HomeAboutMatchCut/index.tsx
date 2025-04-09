@@ -6,7 +6,7 @@ export default function HomeAboutMatchCut() {
     return (
         <div className="md:grow md:basis-0 xl:grow-1">
             <video
-                src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                src="/videos/matchcut.mp4"
                 autoPlay
                 muted
                 loop
