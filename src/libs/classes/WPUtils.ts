@@ -48,7 +48,12 @@ export default class WPUtils {
     static getCategories(){
         return new Promise<CategoryInterface[]>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/categories`);
+                const response = await fetch(`${this.baseUrl}/categories`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 3600
+                    }
+                });
                 const data = await response.json();
                 const res : CategoryInterface[] = [];
                 for(const wpCategory of data){
@@ -70,7 +75,12 @@ export default class WPUtils {
     static getMedia(mediaId : number){
         return new Promise<WPMediaInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/media/${mediaId}`);
+                const response = await fetch(`${this.baseUrl}/media/${mediaId}`,{
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 86400
+                    }
+                });
                 const data = await response.json();
                 resolve(data);
             } catch (error) {
@@ -83,7 +93,12 @@ export default class WPUtils {
         return new Promise<ProjectInterface[]>(async (resolve, reject) => {
             try {
                 const categories = allowedCategories ?? (await this.getCategories()).map((category)=>category.id);
-                const response = await fetch(`${this.baseUrl}/${this.projectsPostType}?categories=${categories.join(",")}${limit ? `&per_page=${limit}` : ""}`);
+                const response = await fetch(`${this.baseUrl}/${this.projectsPostType}?categories=${categories.join(",")}${limit ? `&per_page=${limit}` : ""}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 300
+                    }
+                });
                 const data = await response.json();
                 const res : ProjectInterface[] = [];
                 for(const wpProject of data){
@@ -137,7 +152,12 @@ export default class WPUtils {
     static getCategoryBySlug(slug : string){
         return new Promise<CategoryInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/categories?slug=${slug}`);
+                const response = await fetch(`${this.baseUrl}/categories?slug=${slug}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 3600
+                    }
+                });
                 const data = await response.json();
                 if(data.length > 0){
                     const wpCategory = data[0];
@@ -160,7 +180,12 @@ export default class WPUtils {
     static getCategoryById(id : number){
         return new Promise<CategoryInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/categories/${id}`);
+                const response = await fetch(`${this.baseUrl}/categories/${id}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 3600
+                    }
+                });
                 const data = await response.json();
                 resolve({
                     id: data.id,
@@ -178,7 +203,9 @@ export default class WPUtils {
     static getProjectBySlug(slug : string){
         return new Promise<ProjectInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/${this.projectsPostType}?slug=${slug}`);
+                const response = await fetch(`${this.baseUrl}/${this.projectsPostType}?slug=${slug}`, {
+                    cache: "no-store"
+                });
                 const data = await response.json();
                 if(data.length > 0){
                     const wpProject = data[0];
@@ -214,7 +241,12 @@ export default class WPUtils {
         return new Promise<ArticleInterface[]>(async (resolve, reject) => {
             try {
                 const categories = allowedCategories ?? (await this.getCategories()).map((category)=>category.id);
-                const response = await fetch(`${this.baseUrl}/${this.articlesPostType}?categories=${categories.join(",")}${limit ? `&per_page=${limit}` : ""}${page ? `&page=${page}` : ""}`);
+                const response = await fetch(`${this.baseUrl}/${this.articlesPostType}?categories=${categories.join(",")}${limit ? `&per_page=${limit}` : ""}${page ? `&page=${page}` : ""}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 60
+                    }
+                });
                 //The total number of pages is in the response headers
                 const totalPages = response.headers.get("X-WP-TotalPages");
                 if(setTotal){
@@ -251,7 +283,9 @@ export default class WPUtils {
     static getArticleBySlug(slug : string){
         return new Promise<ArticleInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/${this.articlesPostType}?slug=${slug}`);
+                const response = await fetch(`${this.baseUrl}/${this.articlesPostType}?slug=${slug}`, {
+                    cache: "no-store"
+                });
                 const data = await response.json();
                 if(data.length > 0){
                     const wpArticle = data[0];
@@ -283,7 +317,12 @@ export default class WPUtils {
     static getUser(userId : number){
         return new Promise<string>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/users/${userId}`);
+                const response = await fetch(`${this.baseUrl}/users/${userId}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 86400
+                    }
+                });
                 const data = await response.json();
                 resolve(data.name);
             } catch(error){
@@ -321,7 +360,9 @@ export default class WPUtils {
     static getPageBySlug(slug : string){
         return new Promise<PageInterface>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}?slug=${slug}`);
+                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}?slug=${slug}`, {
+                    cache: "no-store"
+                });
                 const data = await response.json();
                 if(data.length > 0){
                     const wpPage = data[0];
@@ -346,7 +387,12 @@ export default class WPUtils {
     static getPages(){
         return new Promise<PageInterface[]>(async (resolve, reject) => {
             try {
-                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}`);
+                const response = await fetch(`${this.baseUrl}/${this.pagesPostType}`, {
+                    cache: "force-cache",
+                    next : {
+                        revalidate: 3600
+                    }
+                });
                 const data = await response.json();
                 resolve(data.map((wpPage : any) => ({
                     title: this.removeHTMLTags(wpPage.title.rendered),

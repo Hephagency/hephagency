@@ -110,5 +110,29 @@
     "contact_submitted_text":{
         "fr":"Votre message a bien été pris en compte.",
         "en":"Your message has been received." 
+    },
+    "contact_first_name_required":{
+        "fr":"Le prénom est requis",
+        "en":"The first name is required"
+    },
+    "contact_last_name_required":{
+        "fr":"Le nom est requis",
+        "en":"The last name is required"
+    },
+    "contact_email_required":{
+        "fr":"L'email est requis",
+        "en":"The email is required"
+    },
+    "contact_phone_required":{
+        "fr":"Le téléphone est requis",
+        "en":"The phone is required"
+    },
+    "contact_email_invalid":{
+        "fr":"L'email est invalide",
+        "en":"The email is invalid"
+    },
+    "contact_phone_invalid":{
+        "fr":"Le téléphone est invalide",
+        "en":"The phone is invalid"
     }
 }

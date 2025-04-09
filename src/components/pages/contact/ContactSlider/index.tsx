@@ -3,7 +3,7 @@
 import translations from "@/libs/translations/translations";
 import ContactSliderSlide, { ContactSliderSlideProps } from "./ContactSliderSlide"
 import hephagency_config from "@/libs/hephagency_config";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import HephagencyButton from "@/components/global/buttons/HephagencyButton";
 import BackArrowIcon from "@/components/global/icons/BackArrowIcon";
@@ -35,7 +35,18 @@ export default function ContactSlider() {
     const [firstName, setFirstName] = useState<string>("");
     const [lastName, setLastName] = useState<string>("");
     const [phoneNumber, setPhoneNumber] = useState<string>("");
-
+    const [errors,setErrors] = useState<{
+        firstName: string | null;
+        lastName: string | null;
+        email: string | null;
+        phoneNumber: string | null;
+        [key: string]: string | null;
+    }>({
+        firstName: null,
+        lastName: null,
+        email: null,
+        phoneNumber: null
+    });
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const formRef = useRef<HTMLFormElement>(null);
@@ -60,6 +71,51 @@ export default function ContactSlider() {
         if (swiperRef.current) {
             swiperRef.current.swiper.slidePrev();
         }
+    }
+
+    function isEmailValid(){
+        return email.length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function isPhoneNumberValid(){
+        return phoneNumber.length > 0 && /^[\d\s+]+$/.test(phoneNumber);
+    }
+
+    function checkErrors(checkFirstName: boolean, checkLastName: boolean, checkEmail: boolean, checkPhoneNumber: boolean){
+        const newErrors = {
+            ...errors
+        }
+        if(checkFirstName && firstName.length === 0){
+            newErrors.firstName = translations.contact_first_name_required[hephagency_config.language];
+        } else if(checkFirstName){
+            newErrors.firstName = null;
+        }
+        if(checkLastName && lastName.length === 0){
+            newErrors.lastName = translations.contact_last_name_required[hephagency_config.language];
+        } else if(checkLastName){
+            newErrors.lastName = null;
+        }
+        if(checkEmail && email.length === 0){
+            newErrors.email = translations.contact_email_required[hephagency_config.language];
+        } else if(checkEmail){
+            newErrors.email = null;
+        }
+        if(checkPhoneNumber && phoneNumber.length === 0){
+            newErrors.phoneNumber = translations.contact_phone_required[hephagency_config.language];
+        } else if(checkPhoneNumber){
+            newErrors.phoneNumber = null;
+        }
+        if(checkEmail && !isEmailValid()){
+            newErrors.email = translations.contact_email_invalid[hephagency_config.language];
+        } else if(checkEmail){
+            newErrors.email = null;
+        }
+        if(checkPhoneNumber && !isPhoneNumberValid()){
+            newErrors.phoneNumber = translations.contact_phone_invalid[hephagency_config.language];
+        } else if(checkPhoneNumber){
+            newErrors.phoneNumber = null;
+        }
+        setErrors(newErrors);
     }
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
@@ -186,6 +242,7 @@ export default function ContactSlider() {
             children:
                 <div className="flex flex-col gap-6 md:grid md:grid-cols-2 xl:gap-7.5 xl:min-w-175">
                     <ContactSliderField
+                        onBlur={() => checkErrors(false, true, false, false)}
                         type="text"
                         label={translations.contact_last_name[hephagency_config.language]}
                         placeholder={translations.contact_last_name_placeholder[hephagency_config.language]}
@@ -193,8 +250,10 @@ export default function ContactSlider() {
                         onValueChange={(value) => setLastName(value)}
                         name="first_name"
                         required={true}
+                        errorMessage={errors.lastName}
                     />
                     <ContactSliderField
+                        onBlur={() => checkErrors(true, false, false, false)}
                         type="text"
                         label={translations.contact_first_name[hephagency_config.language]}
                         placeholder={translations.contact_first_name_placeholder[hephagency_config.language]}
@@ -202,8 +261,10 @@ export default function ContactSlider() {
                         onValueChange={(value) => setFirstName(value)}
                         name="last_name"
                         required={true}
+                        errorMessage={errors.firstName}
                     />
                     <ContactSliderField
+                        onBlur={() => checkErrors(false, false, true, false)}
                         className="md:col-span-2"
                         type="email"
                         label={translations.contact_email[hephagency_config.language]}
@@ -212,8 +273,10 @@ export default function ContactSlider() {
                         onValueChange={(value) => setEmail(value)}
                         name="email"
                         required={true}
+                        errorMessage={errors.email}
                     />
                     <ContactSliderField
+                        onBlur={() => checkErrors(false, false, false, true)}
                         className="md:col-span-2"
                         type="tel"
                         label={translations.contact_phone[hephagency_config.language]}
@@ -222,14 +285,19 @@ export default function ContactSlider() {
                         onValueChange={(value) => setPhoneNumber(value)}
                         name="phone_number"
                         required={true}
+                        errorMessage={errors.phoneNumber}
                     />
                 </div>,
             containerClassName: "bg-white",
-            isValid: () => {
-                const inputsNotEmpty = [firstName, lastName, email, phoneNumber].every(input => input.length > 0);
-                const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-                const phoneValid = /^\+?[0-9]{10,15}$/.test(phoneNumber);
-                return inputsNotEmpty && emailValid && phoneValid;  
+            isValid: ()=>{
+                return (
+                    firstName.length > 0 &&
+                    lastName.length > 0 &&
+                    email.length > 0 &&
+                    phoneNumber.length > 0 &&
+                    isEmailValid() &&
+                    isPhoneNumberValid()
+                )
             }
         },
         {
@@ -298,7 +366,7 @@ export default function ContactSlider() {
                         currentSlide={currentSlideIndex}
                         totalSlides={slides.length}
                         className={clsx(
-                            currentSlideIndex > 0 ? "opacity-100" : "opacity-0"
+                            (currentSlideIndex > 0  && currentSlideIndex < slides.length - 1) ? "opacity-100" : "opacity-0"
                         )}
                     />
                 </div>
