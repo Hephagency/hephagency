@@ -32,6 +32,7 @@ export default function HomeLandingVideo(){
             });
         }
     },[videoRef]);
+    
     return (
         <video
         ref={videoRef}

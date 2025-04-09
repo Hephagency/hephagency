@@ -5,6 +5,7 @@
 import hephagency_config from "@/libs/hephagency_config";
 import translations from "@/libs/translations/translations";
 import clsx from "clsx";
+import Image from "next/image";
 import { Fragment } from "react";
 
 export function mapParagraphContent(content: string, baseHighlight: string[]) {
@@ -58,11 +59,15 @@ export default function AboutIntroductionSection() {
                     </div>
                 </div>
             </div>
-            <img
-                src="https://picsum.photos/1920/1080?random=1"
-                alt="Hephagency"
-                className="aspect-4/3 object-cover md:aspect-4/2 md:max-h-100 xl:aspect-31/9 max-h-full xl:max-h-none"
-            />
+            <div className="relative w-full aspect-4/3 h-auto overflow-hidden object-cover md:aspect-4/2 md:max-h-100 xl:aspect-31/9 max-h-full xl:max-h-none">
+                <Image
+                    src="/images/gradients/6.png"
+                    alt="Hephagency"
+                    fill
+                    className="static"
+                    objectFit="cover"
+                />
+            </div>
         </section>
     )
 }

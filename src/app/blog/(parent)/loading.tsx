@@ -11,7 +11,7 @@ export default function Loading(){
     return (
         <div>
             <BlogHeading
-            banner="https://picsum.photos/1920/1080?random=1"
+            banner="/images/gradients/1.png"
             title={translations.loading[hephagency_config.language]}
             />
             <div className="flex justify-start max-w-dvw overflow-hidden">

@@ -5,19 +5,13 @@
     },
     "about_intro_paragraph":{
         "fr":{
-            "content":"Agence créant des solutions de design évolutives dans le domaine, du développement, du webdesign, et du branding. Nos forgeons des solutions claires, simples et logiques.",
+            "content":"Agence créative de design évolutif, nous sculptons des solutions claires, simples et logiques du branding au développement, en passant par l’UX/UI.",
             "highlight": [
-                "claires",
-                "simples",
-                "logiques"
             ]
         },
         "en":{
-            "content":"Agency creating scalable design solutions in the field of development, web design, and branding. We forge clear, simple and logical solutions.",
+            "content":"Creative design agency, we sculpt clear, simple and logical solutions from branding to development, passing through UX/UI.",
             "highlight": [
-                "clear",
-                "simple",
-                "logical"
             ]
         }
     },
@@ -86,66 +80,66 @@
     "about_values": [
         {
             "title":{
-                "fr": "Valeur 1",
-                "en": "Value 1"
+                "fr": "Accessibilité",
+                "en": "Accessibility"
             },
-            "illustration": "https://picsum.photos/600/600?random=1",
+            "illustration": "/images/gradients/2.png",
             "text_image": "/images/gradients/tiny/1.png",
             "first_word": {
-                "fr": "Travailler",
-                "en": "Work"
+                "fr": "Chaque projet",
+                "en": "Each project"
             },
             "text":{
-                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                "fr":"a sa propre histoire, ses codes, son ton. Chez nous, pas de template réchauffé ni de recette toute faite : on s’adapte à ton identité, à tes objectifs, à ton public. On part d’une page blanche, on échange, on écoute, et on façonne une expérience digitale qui te ressemble vraiment. Parce que le bon design, c’est celui qui colle à ton ADN — pas à une tendance.",
+                "en":"has its own story, its codes, its tone. At us, no warmed-up template or ready-made recipe: we adapt to your identity, your goals, your audience. We start from a blank page, we exchange, we listen, and we forge a digital experience that really suits you. Because good design is the one that fits your DNA — not a trend."
             }
         },
         {
             "title":{
-                "fr": "Valeur 2",
-                "en": "Value 2"
+                "fr": "Précision",
+                "en": "Precision"
             },
-            "illustration": "https://picsum.photos/600/600?random=2",
-            "text_image": "/images/gradients/tiny/1.png",
+            "illustration": "/images/gradients/3.png",
+            "text_image": "/images/gradients/tiny/3.png",
             "first_word": {
-                "fr": "Travailler",
-                "en": "Work"
+                "fr": "Le détail n’est pas un supplément : c’est ce qui fait toute la différence. Un interligne trop serré, un bouton mal aligné ou une animation bancale, et c’est toute",
+                "en": "The detail is not an addition: it is what makes all the difference. A too tight interline, a button misaligned or a shaky animation, and it's all over."
             },
             "text":{
-                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                "fr":"la perception de qualité qui s’effondre. On travaille avec rigueur, en respectant des grilles solides, des marges justes, des hiérarchies visuelles claires. Chaque composant est pensé, pesé, ajusté — jusqu’à ce que l’ensemble soit fluide, cohérent et net.",
+                "en":"the perception of quality that collapses. We work with rigor, respecting solid grids, just margins, clear visual hierarchies. Each component is thought, weighed, adjusted — until the whole is fluid, coherent and clear."
             }
         },
         {
             "title":{
-                "fr": "Valeur 3",
-                "en": "Value 3"
+                "fr": "Excellence",
+                "en": "Excellence"
             },
-            "illustration": "https://picsum.photos/600/600?random=3",
-            "text_image": "/images/gradients/tiny/1.png",
+            "illustration": "/images/gradients/4.png",
+            "text_image": "/images/gradients/tiny/4.png",
             "first_word": {
-                "fr": "Travailler",
-                "en": "Work"
+                "fr": "On ne vend pas du rêve flou. Dès le début, tu sais ce que tu obtiens, à quel prix, et dans quels délais.",
+                "en": "We don't sell vague dreams. From the start, you know what you get, at what price, and in what time frame."
             },
             "text":{
-                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                "fr":"Pas de jargon inutile, pas de coûts cachés, pas de 'on verra plus tard'. On avance avec toi, en toute clarté, et on t’explique chaque étape du processus. La confiance, ça se construit sur des échanges honnêtes et une gestion carrée — pas sur des effets d’annonce.",
+                "en":"No unnecessary jargon, no hidden costs, no 'we'll see later'. We move forward with you, in all clarity, and we explain each step of the process to you. Trust is built on honest exchanges and fair management — not on false promises."
             }
         },
         {
             "title":{
-                "fr": "Valeur 4",
-                "en": "Value 4"
+                "fr": "Clarté",
+                "en": "Clarity"
             },
-            "illustration": "https://picsum.photos/600/600?random=4",
-            "text_image": "/images/gradients/tiny/1.png",
+            "illustration": "/images/gradients/5.png",
+            "text_image": "/images/gradients/tiny/5.png",
             "first_word": {
-                "fr": "Travailler",
-                "en": "Work"
+                "fr": "Sur le web, tu n’as que quelques secondes pour convaincre. Si l’interface est confuse, si l’œil cherche l’info ou que l’esthétique prend le pas sur l’usage, tu perds ton utilisateur. Nous, on conçoit des expériences lisibles, directes, efficaces. Chaque choix graphique est justifié, chaque élément a une fonction. On fait le tri dans le superflu pour mettre en avant l’essentiel,",
+                "en": "On makes the tri in the superfluous to highlight the essential, to make the most of your time and resources."
             },
             "text":{
-                "fr":"avec nous consectetuer adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue",
-                "en":"with us consectetur adipiscing elit. Nascetur sed facilisis interdum lorem torquent sagittis montes ultrices scelerisque. Est per orci arcu eros sollicitudin bibendum fermentum. Penatibus facilisi sed taciti porttitor mollis vulputate nullam congue"
+                "fr":"avec style et simplicité.",
+                "en":"with style and simplicity."
             }
         }
     ],
@@ -160,54 +154,46 @@
     "about_skills":{
         "fr":[
             {
-                "image":"https://picsum.photos/600/1200?random=5"
+                "image":"/images/skills/branding.png",
+                "title":"Branding"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=6"
+                "image":"/images/skills/dev.png",
+                "title":"Dev"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=7"
+                "image":"/images/skills/ux-ui.png",
+                "title":"UX/UI"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=8"
+                "image":"/images/skills/branding.png",
+                "title":"SEO"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=9"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=10"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=11"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=12"
+                "image":"/images/skills/dev.png",
+                "title":"Photo"
             }
         ],
         "en":[
             {
-                "image":"https://picsum.photos/600/1200?random=5"
+                "image":"/images/skills/branding.png",
+                "title":"Branding"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=6"
+                "image":"/images/skills/dev.png",
+                "title":"Dev"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=7"
+                "image":"/images/skills/ux-ui.png",
+                "title":"UX/UI"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=8"
+                "image":"/images/skills/branding.png",
+                "title":"SEO"
             },
             {
-                "image":"https://picsum.photos/600/1200?random=9"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=10"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=11"
-            },
-            {
-                "image":"https://picsum.photos/600/1200?random=12"
+                "image":"/images/skills/dev.png",
+                "title":"Photo"
             }
         ]
     },
@@ -285,5 +271,13 @@
                 "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
         }
-    ]
+    ],
+    "about_meta_title":{
+        "fr":"Hephagency – Une agence web créative à Lille, entre design et rigueur",
+        "en":"Hephagency – A creative web agency in Lille, between design and rigor"
+    },
+    "about_meta_description":{
+        "fr":"Basée à Lille, Hephagency allie l’esthétique du design suisse à la précision du développement web. ",
+        "en":"Based in Lille, Hephagency combines the elegance of Swiss design with the precision of web development."
+    }
 }

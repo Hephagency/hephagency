@@ -8,13 +8,19 @@ import hephagency_config from "@/libs/hephagency_config";
 import ArticleInterface from "@/libs/interfaces/ArticleInterface";
 import CategoryInterface from "@/libs/interfaces/CategoryInterface";
 import translations from "@/libs/translations/translations";
-
+import { Metadata } from "next";
 interface BlogProps{
     searchParams? : Promise<
     {
         page: number
     }>
 }
+
+export const metadata: Metadata = {
+  title: translations.blog_meta_title[hephagency_config.language],
+  description: translations.blog_meta_description[hephagency_config.language],
+}
+
 export default async function Blog({searchParams}: BlogProps) {
     const params = await searchParams;
     const page = params?.page ? Number(params.page) : 1;
@@ -38,7 +44,7 @@ export default async function Blog({searchParams}: BlogProps) {
     return (
         <BlogLayout
         categories={categories}
-        banner="https://picsum.photos/1920/1080?random=1"
+        banner="/images/gradients/1.png"
         title={translations.blog_title[hephagency_config.language]}
         currentPage={page}
         totalPages={totalPages}

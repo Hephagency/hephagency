@@ -38,5 +38,13 @@
     "home_landing_title_second":{
         "fr":"Notre projet",
         "en":"Our project"
+    },
+    "home_meta_title":{
+        "fr":"Agence web à Lille – Design, Branding & Développement | Hephagency",
+        "en":"Web agency in Lille – Design, Branding & Development | Hephagency"
+    },
+    "home_meta_description":{
+        "fr":"Hephagency est une agence web basée à Lille, spécialisée en design minimaliste, branding sur-mesure et développement performant. Donne vie à ton image de marque avec des solutions élégantes et efficaces.",
+        "en":"Hephagency is a web agency in Lille specialized in minimalist design, custom branding and efficient development. Give life to your brand image with elegant and effective solutions."
     }
 }

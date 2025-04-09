@@ -5,19 +5,13 @@
     },
     "projects_heading_text":{
         "fr":{
-            "text":"Agence créant des solutions de design évolutives dans le domaine, du développement, du webdesign, et du branding. Nos forgeons des solutions claires, de simples et logiques.",
+            "text":"Chaque projet est une pièce unique, forgée avec précision et pensée pour allier esthétique, impact et performance.",
             "highlight":[
-                "claires",
-                "simples",
-                "logiques"
             ]
         },
         "en": {
-            "text": "Agency creating scalable design solutions in the field of development, web design, and branding. We forge clear, simple, and logical solutions.",
+            "text": "Each project is a unique piece, forged with precision and thought to combine aesthetics, impact and performance.",
             "highlight": [
-                "clear",
-                "simple",
-                "logical"
             ]
         }
     },
@@ -26,7 +20,15 @@
         "en":"All projects"
     },
     "projects_archive_text":{
-        "fr":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "en":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "fr":"Façonner avec sens, construire pour durer. Nous forgeons chaque projet dans l’écoute, l’accessibilité et l’exigence. Des réalisations solides, pensées pour durer et toucher.",
+        "en":"Forge with sense, build to last. We forge each project in listening, accessibility and demand. Solid realizations, thought to last and touch."
+    },
+    "projects_meta_title":{
+        "fr":"Nos projets web & branding – Créations sur-mesure à Lille | Hephagency",
+        "en":"Our web & branding projects – Custom creations in Lille | Hephagency"
+    },
+    "projects_meta_description":{
+        "fr":"Explore les projets signés Hephagency : identités visuelles, sites web, interfaces et expériences digitales conçues avec soin à Lille. Design épuré, code solide, stratégie claire.",
+        "en":"Explore the projects signed by Hephagency: visual identities, websites, interfaces and digital experiences designed with care in Lille. Clean design, solid code, clear strategy."
     }
 }

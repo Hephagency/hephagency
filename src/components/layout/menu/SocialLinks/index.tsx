@@ -15,25 +15,21 @@ interface SocialLinksProps{
 export default function SocialLinks({linkClassName, parentElement}: SocialLinksProps){
     const links : MenuLinkProps[] = [
         {
-            href: "#",
-            children: translations.linkedin[hephagency_config.language],
-        },
-        {
-            href: "#",
+            href: "https://www.instagram.com/hephagency/",
             children: translations.instagram[hephagency_config.language],
         },
         {
-            href: "#",
+            href: "https://www.behance.net/hephagency/",
             children: translations.behance[hephagency_config.language],
         },
         {
-            href: "#",
-            children: translations.awwwards[hephagency_config.language],
+            href: "https://www.linkedin.com/company/hephagency/",
+            children: translations.linkedin[hephagency_config.language],
         }
     ]
     const children = parentElement ?
-    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName} hideLoader={true}/>)) :
-    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName} hideLoader={true}/>);
+    links.map((link, index)=>createElement(parentElement, {key: index }, <MenuLink {...link} className={linkClassName} hideLoader={true} target="_blank"/>)) :
+    links.map((link, index)=><MenuLink key={index} {...link} className={linkClassName} hideLoader={true} target="_blank"/>);
 
     return (
         <>

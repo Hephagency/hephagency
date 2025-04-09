@@ -10,6 +10,13 @@ import CategoryInterface from "@/libs/interfaces/CategoryInterface";
 import ProjectInterface from "@/libs/interfaces/ProjectInterface";
 import translations from "@/libs/translations/translations";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: translations.projects_meta_title[hephagency_config.language],
+  description: translations.projects_meta_description[hephagency_config.language],
+}
+
 export default async function Projects(){
     let categories : CategoryInterface[] = [];
     let projects : ProjectInterface[] = [];

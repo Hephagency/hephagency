@@ -21,18 +21,16 @@
     },
     "contact_subjects":{
         "fr":[
-            "Thème 1",
-            "Thème 2",
-            "Thème 3",
-            "Thème 4",
-            "Thème 5"
+            "Commencer un projet",
+            "Rejoindre l'équipe",
+            "Branding",
+            "Développement web"
         ],
         "en":[
-            "Theme 1",
-            "Theme 2",
-            "Theme 3",
-            "Theme 4",
-            "Theme 5"
+            "Start a project",
+            "Join the team",
+            "Branding",
+            "Web development"
         ]
     },
     "contact_discover_title":{
@@ -41,18 +39,18 @@
     },
     "contact_discover_propositions":{
         "fr":[
-            "Thème 1",
-            "Thème 2",
-            "Thème 3",
-            "Thème 4",
-            "Thème 5"
+            "Réseaux sociaux",
+            "Bouche à oreille",
+            "Moteur de recherche",
+            "Affiche",
+            "Publicité"
         ],
         "en":[
-            "Theme 1",
-            "Theme 2",
-            "Theme 3",
-            "Theme 4",
-            "Theme 5"
+            "Social media",
+            "Word of mouth",
+            "Search engine",
+            "Poster",
+            "Advertising"
         ]
     },
     "contact_other_answer_placeholder":{
@@ -134,5 +132,13 @@
     "contact_phone_invalid":{
         "fr":"Le téléphone est invalide",
         "en":"The phone is invalid"
+    },
+    "contact_meta_title":{
+        "fr":"Contacte notre agence web à Lille – Parlons design et projets | Hephagency",
+        "en":"Contact us – Hephagency"
+    },
+    "contact_meta_description":{
+        "fr":"Tu as un projet de site, de rebranding ou de design ? Contacte Hephagency à Lille. On t’écoute, on t’accompagne, et on crée une solution digitale à ton image.",
+        "en":"Do you have a project for a website, rebranding or design? Contact Hephagency in Lille. We listen to you, we accompany you, and we create a digital solution for your image."
     }
 }

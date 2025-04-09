@@ -10,5 +10,13 @@
     "blog_all":{
         "fr":"Tous les articles",
         "en":"All articles"
+    },
+    "blog_meta_title":{
+        "fr":"Blog design & branding – Actus, conseils et inspirations | Hephagency",
+        "en":"Design & branding blog – News, tips and inspirations | Hephagency"
+    },
+    "blog_meta_description":{
+        "fr":"Le blog d’Hephagency : articles sur le webdesign, le branding, les tendances tech et l’identité visuelle. Des ressources utiles pour marques, PME et passionnés du digital à Lille et ailleurs.",
+        "en":"The Hephagency blog: articles on web design, branding, tech trends and visual identity. Useful resources for brands, SMEs and digital enthusiasts in Lille and elsewhere."
     }
 }

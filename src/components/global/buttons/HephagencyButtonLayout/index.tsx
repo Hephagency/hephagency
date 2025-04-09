@@ -15,7 +15,7 @@ export interface HephagencyButtonLayoutProps{
 export default function HephagencyButtonLayout({icon, children, className, isActive}: HephagencyButtonLayoutProps){
     return (
         <div className={clsx(
-            "flex items-center justify-center px-8 py-3 paragraph-large gap-2.5 border border-current uppercase relative z-10 group transition-all duration-300",
+            "flex items-center justify-center px-8 py-3 paragraph-large gap-2.5 border border-current uppercase relative z-10 group transition-all duration-300 whitespace-nowrap",
             className,
             isActive ? "invert" : "hover:invert"
         )}>

@@ -16,7 +16,7 @@ interface ContactSliderButtonsListProps{
 
 export default function ContactSliderButtonsList({buttons}: ContactSliderButtonsListProps) {
     return (
-        <ul className="grid grid-cols-2 w-fit gap-x-5 gap-y-2.5 md:grid-cols-3">
+        <ul className="flex flex-wrap gap-x-5 gap-y-2.5">
             {buttons.map((button, index) => (
                 <li key={index}>
                     <HephagencyButton

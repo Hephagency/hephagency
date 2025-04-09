@@ -40,10 +40,9 @@ export default function InlineImageText({ image, firstWord, text, className, ele
                 className="w-6 h-auto md:absolute md:top-0 md:left-0 md:translate-y-1/4"
             />
             <div className="paragraph-x-large uppercase font-league-spartan md:h5">
-                <span className="inline-block md:ml-52.5">
+                <span className="inline md:ml-52.5">
                     {splitText(firstWord)}
                 </span>
-                &nbsp;
                 <Image
                 src={image}
                 alt={image}
