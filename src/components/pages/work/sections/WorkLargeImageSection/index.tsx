@@ -17,7 +17,7 @@ export default function WorkLargeImageSection({section}: WorkLargeImageSectionPr
             section.mirror ? "flex-col-reverse xl:flex-row-reverse" : "flex-col xl:flex-row"
         )}>
             <div className="xl:grow-6 xl:basis-0">
-                <div className="flex flex-col gap-2.5">
+                <div className="flex flex-col gap-2.5 xl:sticky xl:top-1/6">
                     {section.images.map((image,index)=>
                     <img
                     className="w-full h-auto"

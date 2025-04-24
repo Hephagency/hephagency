@@ -2,7 +2,6 @@
  * A React component that renders a page for a project work.
  */
 
-import sampleProjects from "@/libs/static/sampleProjects";
 import { notFound } from "next/navigation";
 import WorkHeadingSection from "@/components/pages/work/WorkHeadingSection";
 import WorkLargeImageSection from "@/components/pages/work/sections/WorkLargeImageSection";
@@ -11,7 +10,6 @@ import WorkOneThirdSection from "@/components/pages/work/sections/WorkOneThirdSe
 import WorkCenteredTextsSection from "@/components/pages/work/sections/WorkCenteredTextsSection";
 import { Fragment } from "react";
 import WorkThumbnail from "@/components/pages/work/WorkThumbnail";
-import sampleCategories from "@/libs/static/sampleCategories";
 import ProjectsLayout from "@/components/pages/projects/ProjectsLayout";
 import translations from "@/libs/translations/translations";
 import hephagency_config from "@/libs/hephagency_config";
@@ -39,8 +37,7 @@ export async function generateStaticParams(){
 }
 
 export async function generateMetadata(
-    {params} : ProjectWorkPageProps,
-    parent: ResolvingMetadata
+    {params} : ProjectWorkPageProps
 ) : Promise<Metadata>{
     const {slug} = await params;
     let find;
@@ -61,6 +58,7 @@ export default async function ProjectWorkPage({ params }: ProjectWorkPageProps) 
     try{
         project = await WPUtils.getProjectBySlug(slug);
     }catch(error){
+        console.error('Error getting project by slug:', error);
         notFound();
     }
 

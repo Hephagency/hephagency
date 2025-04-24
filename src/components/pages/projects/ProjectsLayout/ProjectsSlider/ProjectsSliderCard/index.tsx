@@ -21,7 +21,7 @@ export default function ProjectsSliderCard({ project, className }: ProjectsSlide
         >
             <div className="overflow-hidden">
                 <img
-                    src={project.thumbnail}
+                    src={project.heading_image}
                     alt={project.title}
                     className="w-full aspect-3/4 md:aspect-36/38 object-cover xl:aspect-44/57 transition-all group-hover:scale-110 group-active:scale-110 duration-500"
                 />

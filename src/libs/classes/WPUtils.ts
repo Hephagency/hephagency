@@ -115,7 +115,7 @@ export default class WPUtils {
                         url: wpProject.acf.url,
                         customer: wpProject.acf.customer,
                         sections: [],
-                        heading_image: "",
+                        heading_image: (await this.getMedia(wpProject.acf.heading_image))?.source_url,
                         metadata: {
                             title: wpProject.yoast_head_json.title,
                             description: wpProject.yoast_head_json.description
@@ -133,7 +133,7 @@ export default class WPUtils {
         return new Promise<ProjectSectionInterface>(async (resolve, reject) => {
             try {
                 resolve({
-                    texts: acfProjectSection.texts.map(({content})=>content),
+                    texts: Array.isArray(acfProjectSection.texts) ? acfProjectSection.texts.map(({content})=>content) : [],
                     images: Array.isArray(acfProjectSection.images) ? await Promise.all(acfProjectSection.images.map(async (imageId : number) => ({src: (await this.getMedia(imageId))?.source_url, alt: (await this.getMedia(imageId))?.alt_text}))) : [],
                     type: acfProjectSection.type,
                     mirror: acfProjectSection.mirror,
